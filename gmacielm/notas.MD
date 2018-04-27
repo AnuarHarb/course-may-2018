@@ -1,4 +1,7 @@
-Este archivo contendrá las notas correspondientes al curso de POLYMER en su parte de GIT
+# NOTAS GIT 
+___
+
+### Este archivo contendrá las notas correspondientes al curso de POLYMER en su parte de GIT
 
 git commit -m "Mensaje correspondiente al commit que se está realizando"
 
