@@ -1,3 +1,3 @@
-### Course May 2018 - Frontend
+## Course May 2018 - Frontend
 
 # Markdown
