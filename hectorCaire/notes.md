@@ -8,7 +8,18 @@
 - cd [nombre directorio] : Cambiar a directorio
 - ls : Listado de contenido en un directorio
 - mkdir [nombre directorio] : Crear Directorio
-- ouch [nombre de archivo] : Crear Archivo
+- touch [nombre de archivo] : Crear Archivo
+
+
+### Comandos de Git
+
+- git init : Inicializar el repositorio
+- git clone [url de Github] : Clonar repositorio
+- git remote add [nombre del remote] [url del remote] : Crear remote.
+- git remote -v : Muestra info de los remote existentes
+- git add [nombre del archivo] : Se agregan archivos para incluir en el commit.
+- git commit -m [mensaje] : Se da commit a los cambios pendientes por subir.
+- git push [remote] [branch] : Se suben cambios a remote especificado
 
 ## Referencias
 
