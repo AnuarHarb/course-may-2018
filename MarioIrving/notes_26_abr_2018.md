@@ -2,21 +2,22 @@
 
 ## Ponentes
 
-## Anuar Harb :
-horario 2 a 6 pm.
-Desarrollador Frontend. Endocado a la parte frontend. Gusto por la interaccion con el usuario
+## Anuar Harb
+Horario 2 a 6 pm.
+Desarrollador Frontend. Gusto por la interacción con el usuario
 
 ## Alfonso Ríos
-3er semestre de ingenieria trunca. 6 años programando. Tiene 22 años.
+3er semestre de ingeniería trunca. 6 años programando. Tiene 22 años.
 
 ****
 
 ## Temario
 
-### Semana1
-- Git ECMAScript 6
+### Semana 1
+- Git
+- ECMAScript 6
 - Package Manager
-- Enrivonment
+- Environment
   * API-Fetch para peticiones
   * Package Manager NPM
 
@@ -25,14 +26,14 @@ Desarrollador Frontend. Endocado a la parte frontend. Gusto por la interaccion c
 - Testing
 - Unit testing
 - Responsive Design
-  * Crear paginas para todos los dispositivos
+  * Crear páginas para todos los dispositivos
   * CSS
   * Layouts: flexbox, MediaQueries, Flexbox
 
 ### Semana 3
 - Polymer
   * Web components
-  * sintaxis
+  * Sintaxis
 - PWA (Progressive Web Apps)
   * Polymer 2.0
   * Como se hacen los componentes
@@ -46,26 +47,27 @@ Desarrollador Frontend. Endocado a la parte frontend. Gusto por la interaccion c
 
 ### Asistentes
 
-Mohammed
-1. Hector
-2. Carlos
-3. José Luis,
-4.  
-5. Mario
-6. Mario
-7. Jorge
-8. David
+1. Mohammed
+2. Héctor
+3. Carlos
+4. José Luis
+5.  
+7. Mario
+8. Mario
+9. Jorge
+10. David
 
 ****
 
 ### Reglas
 
 * Receso de 5:30 a 6:30
-* Entrada a las 2:00 pm cinco minutos de tolerancia
-* Llamadas contestar afuera
+* Entrada a las 2:00 pm con cinco minutos de tolerancia
+* Contestar las llamadas afuera
 * No meter comida
 * Snacks (dulces, agua)
-* Slack canal de comunicacion
+* [Slack](https://slack.com/intl/es) canal de comunicación
+
 
 ****
 
