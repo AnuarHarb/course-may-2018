@@ -1,6 +1,6 @@
-# Clase curso de Polymer
+# Clase 1 curso de Polymer
 
-###En el curso de hoy vimos comandos de unix como:
+### En el curso de hoy vimos comandos de unix como:
   * mkdir: para crear carpetas
   * touch: para crear archivos
   * ls: para listar archivos
@@ -10,7 +10,7 @@
   * mv: para mover archivos
   * cp: para mover archivos
 
-###Además vimos como trabajar con git:
+### Además vimos como trabajar con git:
 
   * para crear un control de versiones se utiliza: **git init**
   * para ver el estados de nuestros archivos utilizamos **git status**
@@ -20,4 +20,4 @@
   * Podemos ver el historial de nuestros cambios con el comando **git log**
   * Podemos agregar un repositorio para trabajar distribuidamente con **git remote add origin repositoryUrl**
   * Ahora podemos bajas y subir cambios en nuestro repositotio remoto con **git push y git pull**
-  * 
+  *
