@@ -116,3 +116,10 @@ Desarrollador Frontend. Gusto por la interacción con el usuario
 * MD = markdown
 * [Online Markdown Editor](https://dillinger.io)
 * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+****
+
+##ECMA6
+
+* [ECMAScript 6 — New Features: Overview & Comparison](http://es6-features.org/#StatementBodies)
+* [ECMA.org](http://www.ecma-international.org/ecma-262/6.0/)
