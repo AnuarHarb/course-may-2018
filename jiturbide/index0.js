@@ -16,13 +16,13 @@
 		 	// console.log(response);
 		 	let theHtml = "";
 		 	let theRow = "";
-		 	
-            theHtml = "<table style='width:100%'><tr> <th>Concepto</th> <th>Valor</th> </tr>";
+
+            theHtml = "<table style='width:100%' padd><tr> <th>Concepto</th> <th>Valor</th> </tr>";
 
             for(let key in response.datos) {
                 console.log(response.datos[key]['nombre']);
 
-                theRow = "<tr><td>Nombre</td><td>" + response.datos[key]['nombre'] + "</td></tr>";
+                theRow = "<tr><td>" + response.datos[key]['id'] + "</td><td>" + response.datos[key]['nombre'] + "</td></tr>";
                 theHtml = theHtml + theRow;
             }
             
