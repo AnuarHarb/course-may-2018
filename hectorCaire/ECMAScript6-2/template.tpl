@@ -11,7 +11,7 @@
         }
     </style>
 
-    <h3 class="red"><<TITLE>><h3>
+    <h3 class="red"><<TITLE>></h3>
         <div>
             <div class="red"><<DATE>></div>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing <span class="red"><<NAME>> <<LAST_NAME>> <<SECOND_LAST_NAME>></span> fermentum ipsum. Suspendisse sagittis ultrices augue. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Fusce nibh. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Nullam faucibus mi quis velit. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam quis nulla. In sem justo, commodo ut, suscipit at, pharetra vitae, orci.</p>
