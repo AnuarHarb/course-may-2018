@@ -1,69 +1,68 @@
-/* Hello, World! program in node.js */
-console.log("Mensaje desde la consola: Hello, World!");
+'use strict';
 
-var http = require("http");
+const http = require('http');
+const chalk = require('chalk');
 
-for (let j = 0; j < process.argv.length; j++) {
-    console.log(j + ' -> ' + (process.argv[j]));
-}
+let environment = 'dev';
 
-var tipoEntorno = "dev";
-
-if(process.argv.length == 3) {
-    tipoEntorno = process.argv[2];
+if (process.argv.length == 3) {
+    environment = process.argv[2];
 } else {
-  console.log("Usar node index.js dev | qa | prod");
+    console.log(chalk.yellow('Use node index.js dev | qa | prod'));
 }
 
 http.createServer(function (request, response) {
-   response.writeHead(200, {'Content-Type': 'text/html'});
+    response.writeHead(200, {'Content-Type': 'text/html'});
 
-   var fs = require('fs');
+    const fs = require('fs');
 
-   //1. Read template
-   fs.readFile('template.tpl', 'utf8', function(err, dataTemplate) {
-       if (err) throw err;
-       //console.log(dataTemplate);
+    //1. Read template
+    fs.readFile('template.tpl', 'utf8', (error, dataTemplate) => {
+        if (error) {
+            throw error;
+        }
 
-       //2. Read json file
-       try {
-           var jsonFilename = './env/' + tipoEntorno + '.json';
-           var data = fs.readFileSync(jsonFilename, 'utf8');
-           var jsonData = JSON.parse(data);
-           //printDataJsonFile(jsonData);
+        //2. Read json file
+        let jsonData = {};
 
-       } catch(e) {
-           console.log('Error:', e.stack);
-       }
+        try {
+            const jsonFilename = './env/' + environment + '.json';
+            const data = fs.readFileSync(jsonFilename, 'utf8');
+            jsonData = JSON.parse(data);
 
-       //3. Replace placeholders
-       var outputData = dataTemplate;
-       outputData = outputData.replace("<<entorno>>", jsonData.entorno);
-       outputData = outputData.replace("<<server>>", jsonData.server);
-       outputData = outputData.replace("<<puerto>>", jsonData.puerto);
-       console.log(outputData);
+        } catch (error) {
+            console.log(chalk.red('Error:', error.stack));
+        }
 
-       //4. Write file
-       var fsw = require('fs')
-       var outputFilename = 'output.' + tipoEntorno + '.txt';
-       var arch = fs.createWriteStream(outputFilename, {
-          flags: 'a' // 'a' means appending (old data will be preserved)
-        })
-       arch.write(outputData) // append string to your file
-       arch.end();
+        //3. Replace placeholders
+        let outputData = dataTemplate;
+        outputData = outputData.replace("<<environment>>", jsonData.environment);
+        outputData = outputData.replace("<<server>>", jsonData.server);
+        outputData = outputData.replace("<<port>>", jsonData.port);
 
-   });
+        //4. Write file
+        const outputFilename = `output.${environment}.txt`;
+        let arch = fs.createWriteStream(outputFilename, {
+            // 'a' means appending (old data will be preserved)
+            flags: 'a'
+        });
+        // append string to your file
+        arch.write(outputData);
+        arch.end();
 
-   // Send the response body as "Hello World"
-   response.write('<h2>Respuesta desde el server Hello World </h2><br/>');
-   response.write("<br/>");
-   response.end();
+    });
+
+    // Send the response body as "Hello World"
+    response.write('<h2>Respuesta desde el server Hello World </h2><br/>');
+    response.write('<br/>');
+    response.end();
 }).listen(8081);
 
-function printDataJsonFile(data) {
-  console.log("entorno: " + data.entorno);
-  console.log("server: " + data.server);
-  console.log("puerto: " + data.puerto);
+const printDataJsonFile = (data) => {
+    console.log(chalk.blue('Environment: ' + data.environment));
+    console.log(chalk.blue('Server: ' + data.server));
+    console.log(chalk.blue('Port: ' + data.port));
 }
+
 // Console will print the message
-console.log('Server running at http://127.0.0.1:8081/');
+console.log(chalk.blue('Server running at http://127.0.0.1:8081/'));

@@ -1,7 +1,7 @@
 ***************************************
 Valores de configuracion del entorno
 
-Entorno: <<entorno>>
+Entorno: <<environment>>
 Server: <<server>>
-Puerto: <<puerto>>
+Puerto: <<port>>
 ***************************************

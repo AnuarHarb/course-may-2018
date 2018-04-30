@@ -1,6 +1,6 @@
 
 {
-   "entorno" : "Desarrollo",
+   "environment" : "Desarrollo",
    "server" : "172.10.10.10",
-   "puerto" : 9060
+   "port" : 9060
 }
