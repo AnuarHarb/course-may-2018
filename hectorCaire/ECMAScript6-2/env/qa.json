@@ -1,7 +1,7 @@
 {
-  "TITULO":"Mi t&iacute;tulo de Pruebas",
-  "FECHA":"28/02/2010",
-  "NOMBRE":"Carlos David",
-  "APELLIDOP":"Rodriguez",
-  "APELLIDOM":"Jimenez"
+  "TITLE": "Mi título de Pruebas",
+  "DATE": "28/02/2010",
+  "NAME": "Carlos David",
+  "LAST_NAME": "Rodríguez",
+  "SECOND_LAST_NAME": "Jiménez"
 }
