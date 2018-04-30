@@ -1,29 +1,49 @@
-var http = require('http');
+const http = require('http');
+const chalk = require('chalk');
+const yargs = require('yargs');
 
-http.createServer(function (req, res) {
+const serve = (env = 'qa') => {
+    http.createServer((request, response) => {
 
-  var fs = require('fs');
-  const env ="qa"
+        const fs = require('fs');
 
-  var envFile=`env/${env}.json`;
+        const environtmentFileName = `env/${env}.json`;
 
-  var template= fs.readFileSync('template.tpl', 'utf8');
+        let template = fs.readFileSync('template.tpl', 'utf8');
 
-  console.log(template);
+        let variables = '';
 
-  var variables = JSON.parse(fs.readFileSync(envFile, 'utf8'));
+        try {
+            variables = JSON.parse(fs.readFileSync(environtmentFileName, 'utf8'));
+        } catch (error) {
+            throw Error('Does not exist ' + environtmentFileName);
+        }
 
+        for (const variable in variables) {
+            template = template.replace(`<<${variable}>>`, variables[variable]);
+        }
 
-  for (variable in variables){
-    template=template.replace(`<<${variable}>>`,variables[variable]);
-  }
+        fs.writeFile('file.html', template, (error) => {
+            if (error) {
+                throw error;
+            }
+            console.log(chalk.green('The file was created'));
+        });
 
-  fs.writeFile('archivo.html', template, (err) => {
-    if (err) throw err;
-    console.log('El archivo se creó');
-  });
+        response.writeHead(200, {'Content-Type': 'text/html'});
+        response.end('Process finished success');
 
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  res.end('Proceso terminado');
+    }).listen(8080);
+};
 
-}).listen(8080);
+yargs
+    .command('serve [env]', 'start the server', (yargs) => {
+        yargs
+            .positional('env', {
+                describe: 'environment to bind on',
+                default: 'qa'
+            })
+    }, (argv) => {
+        serve(argv.env);
+    })
+    .argv;
