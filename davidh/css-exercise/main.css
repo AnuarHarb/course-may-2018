@@ -1,0 +1,59 @@
+
+@media screen and (max-width: 768px) {
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --prymary-color: #444444;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+      color: white;
+      background-color: var(--prymary-color);
+      font-size: 20px;
+    }
+    .nav  i {
+      width: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 50px;
+      padding: 5px;
+      border: 1px solid white;
+      border-radius: 5px;
+    }
+    .cover {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url("./img/homepage__cover.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .slogan {
+      height: 60vh;
+      width: 100vh;
+      background-image: url("./img/slogan-shadow.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .stats {
+      height: 100vh;
+      width: 100vh;
+      display: grid;
+      grid-template-columns:  repeat(2, 1fr);
+      grid-template-rows:  repeat(2, 1fr);
+      grid-gap: 10px;
+    }
+    .stats-unit {
+      width: 100%;
+      height: 100%;
+      background-color: red;
+    }
+}
