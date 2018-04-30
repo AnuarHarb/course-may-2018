@@ -13,7 +13,7 @@
 
   function printProfile(data) {
     console.log(data)
-    for (var info in data) {
+    for (let info in data) {
       console.log(data[info])
       if (data[info].endsWith(".jpg"))
         concat += `<img src="${data[info]}" width="200" style="border-radius:10px; border: 1px solid blue"></img>`
