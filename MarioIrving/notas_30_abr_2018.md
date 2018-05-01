@@ -7,7 +7,7 @@
     *{
         box-sizing: border-box
     }  
-
+```
 El contenido es el que se ajusta y no el elemento contenedor normalize también se puede usar  al incio
 
 #### Atom pluggins
@@ -26,11 +26,12 @@ El contenido es el que se ajusta y no el elemento contenedor normalize también 
 
 Todos los contenedores van a incluir un display block se pueden definir tamaños, border padding. Solo uno por línea
 
-element.style{
+```css
+  element.style{
 	margin-left: 20;
   margin: 0 auto; (centra elementos)
 }
-
+```
 ##### display-line
 Se ajustará al contenido que tiene. Para el tamaño de letra y del contenido se usa para spans, negritas, itálicas, cosas
 alineadas al texto. Se puede agregar padding y margin.
@@ -39,13 +40,13 @@ alineadas al texto. Se puede agregar padding y margin.
 Ajusta varios elementos y los vamos a poder agregar por medio text-align pero hay que ponérselo regularmente en el padre.
 Se toman como texto al momento de acomodarse.
 
-se han usado (display, display-inline, display-inline-block)
+Se han usado (display, display-inline, display-inline-block)
 
 * Display toma el espacio entre los elementos y los junta
 <div></div>
 <div></div>
 
-*debe de serar en el contenido
+* debe de serar en el contenido
 <div></div><div></div>
 
 ##### display flex
@@ -55,11 +56,12 @@ Pareciera que es un display-block pero tiene más propiedades
 Nos dice como se acomodan los hijos y tiene los atributos: space-around y space between
 
 ##### flex-wrap
+```css
  {
    justify-content-center
    flex-wrap: wrap;
 }
-
+```
 Para poder centrar las cosas verticalmente se debe tener una altura
 
 ##### align.self: center;
@@ -68,11 +70,11 @@ Si queremmos centrar a los hijos
 
 Se pueden ordenar los elementos por clases
 
-.div3{
+ ```CSS
+  .div3{
     order: 1;
-}
-
-    }
+  }
+      {
     justify-content: center;
     height: 500px;
   }
@@ -111,6 +113,7 @@ espacio entre ellas:
 
 Los media query son breakpoints para estílos específicos:
 
+```css
 @media screen and (max-width:600px){
     :root{
         --normal-size: 20px;
@@ -121,6 +124,7 @@ Los media query son breakpoints para estílos específicos:
         width: 100%;
     }
 }
+```
 
 Medidas de dispositivos
 * tableta 768px
