@@ -1,7 +1,7 @@
 
 # Día 30 de abril
 
-## css
+## CSS
 
 ```CSS
     *{
@@ -139,3 +139,55 @@ support(display:grid)
 * [Flexbox Froggy](https://flexboxfroggy.com/#es)
 * [Grid Garden](http://cssgridgarden.com/#es)
 * [CSS Diner](https://flukeout.github.io/)
+
+## Revisión ejercicios del viernes 27
+
+## Javascript es un lenguaje prototipado
+
+ECMA 6 utiliza ` ` para embeber las variables o las funciones, esto para evitar pegar cadenas.
+
+```javascript
+const myFunction = () => {
+
+	@todo block section
+
+}
+
+```
+
+### For-in y for-of
+* for in se utiliza para reccorrer objetos
+* for of se utiliza para array maps etc.
+
+Cada vez que se repite el cicclo no se le asigna el nuevo valor de la iteración. Se crea una nueva instancia
+y se destruye la anterior.
+
+### .gitignorea
+Los archivos que se deben excluir:
+* dependencias
+* logs
+* .idea
+* archivos generados
+
+### Convenciones para código
+
+* Las variables en ingles
+* Los valores pueden ir en el idioma local
+* Se utiliza ';' en todas líneas y los if deben llevar complementadas las llaves {}
+* Siempre se usará el 'use strict'
+* No se permite el código muerto (comentado)
+* Las librerías se importan con const
+* Las funciones se pueden utilizar con un valor default
+* Las variables tienen que ser autodescriptivas request response error event
+* Hay que ocupar try-catch para programación síncrona. Try-catcch genera su propio scoope
+* Utilizaremos const a menos que vaya a cambiar de valor utilizamos let
+
+### Algunas librerías para resolver el ejercicio
+* chalk mostrar información al usuario (colorcitos al usuario)
+* yargs importar cosas en la linea de comandos del usuario comander también gestiona esto
+
+```javascript
+const object = {};
+object.name='';*el objeto es constante pero la propuedad no lo es.
+object.name='Hola';
+```
