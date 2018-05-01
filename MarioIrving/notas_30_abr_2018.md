@@ -78,6 +78,7 @@ Se pueden ordenar los elementos por clases
     justify-content: center;
     height: 500px;
   }
+```
 
 #### GRID
 ##### display-grid
