@@ -52,10 +52,10 @@ Desarrollador Frontend. Gusto por la interacción con el usuario
 3. Carlos
 4. José Luis
 5.  
+6. Mario
 7. Mario
-8. Mario
-9. Jorge
-10. David
+8. Jorge
+9. David
 
 ****
 

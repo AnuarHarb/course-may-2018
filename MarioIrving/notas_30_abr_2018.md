@@ -1,98 +1,115 @@
-    box-sizing: border-box
-    el contenido es el que se ajustaa y no la el elemento contenedor
-    normalize tambi�n se puede usar  *{
-    }al incio
 
-atom pluggins
-emet
-pigment
-file-icons
-linter 2.2.0
-atom_beautify
+# Día 30 de abril
 
-articles elementos espec�fifcos
-headers definir el encabezado de la p�gina
-footer pie de p�gina
-nav barra de navegaci�n, lista de elementos que podamos seleccionar
-aside elementos que esten por un lado
+## css
 
-todos los contenedores va a incluir un display block se pueden definir tama�os, border padding. Solo uno por linea
+```CSS
+    *{
+        box-sizing: border-box
+    }  
+
+El contenido es el que se ajusta y no el elemento contenedor normalize también se puede usar  al incio
+
+#### Atom pluggins
+* emmet
+* pigment
+* file-icons
+* linter 2.2.0
+* atom_beautify
+
+##### Elementos html5
+* articles elementos específifcos
+* headers definir el encabezado de la página
+* footer pie de página
+* nav barra de navegación, lista de elementos que podamos seleccionar
+* aside elementos que esten por un lado
+
+Todos los contenedores van a incluir un display block se pueden definir tamaños, border padding. Solo uno por línea
+
 element.style{
-	margin-left: 20
+	margin-left: 20;
+  margin: 0 auto; (centra elementos)
 }
 
-margin: 0 auto (centrar algo)
+##### display-line
+Se ajustará al contenido que tiene. Para el tamaño de letra y del contenido se usa para spans, negritas, itálicas, cosas
+alineadas al texto. Se puede agregar padding y margin.
 
-display-line se ajustar� al contenido que tiene. tama�o del letra de lcontenido se usa para sapns, negritas, it�licas, cosas
-alineadas al texto. Se puede agregar padding y margin
-
-margin.inline-block ajusta vario selementos y los vamos a poder agregar por medio text-align pero hay que pon�rselo al padre
-regularmente en el padre. Se toman como texto al momento de acomodarse.
+##### margin.inline-block
+Ajusta varios elementos y los vamos a poder agregar por medio text-align pero hay que ponérselo regularmente en el padre.
+Se toman como texto al momento de acomodarse.
 
 se han usado (display, display-inline, display-inline-block)
-display toma el espacio entre los elementos y los junta
+
+* Display toma el espacio entre los elementos y los junta
 <div></div>
 <div></div>
-debe de serar en el contenido
+
+*debe de serar en el contenido
 <div></div><div></div>
 
-display flex
-Pareciera que es un display-block pero va a camb
+##### display flex
+Pareciera que es un display-block pero tiene más propiedades
 
-justify content
-nos dice como se aocdatan los hijos(space-around, space between)
+##### justify content
+Nos dice como se acomodan los hijos y tiene los atributos: space-around y space between
 
-flex-wrap
-+justify-content-center
- flex-wrap: wrap;
+##### flex-wrap
+ {
+   justify-content-center
+   flex-wrap: wrap;
+}
 
-para poder centrar las cosas verticalmente se debe tener una altura
+Para poder centrar las cosas verticalmente se debe tener una altura
 
-si queremmos centrar a los hijos align.self: center
+##### align.self: center;
 
-se puede ordenar los elementos por clases .div3{
+Si queremmos centrar a los hijos
+
+Se pueden ordenar los elementos por clases
+
+.div3{
     order: 1;
 }
 
+    }
     justify-content: center;
     height: 500px;
+  }
 
-GRID
-display-grid
+#### GRID
+##### display-grid
 
-explorer aceptaci�n parcial. todos los dem�s navegadores lo aceptan. con safari 10 no lo soportan y FF 55. Para revisar
-si las funcionalidades lo soportan los navegadores. podemos consultar la p�gina Can I Use
-a display grid se le pueden poner
-otras caracter�sticas de flexbox
-   grid-template-columns: auto auto auto;
-esto es una ventaja sobre bootstrap para no tener las 12 columnas
-se puede manejar con porcentaj y columna. nos da medidas nuevas
-   grid-template-columns: 200px 100px  100px 100px ;
-se pueden usar porcentajes tambi�n
+En el navegador explorer existe aceptación parcial. Todos los demás navegadores lo aceptan. Con safari versión 10 no lo soportan y firefox 55. Para revisar poder revisar si las funcionalidades las soportan los navegadores podemos consultar::after
 
-max-content min-content
-  grid-template-columns:100px 100px 100px max-content 100px ;
+[can i use](https://caniuse.com/)
 
-fragment
+Al display grid se le pueden poner otras características de flexbox como:
+* grid-template-columns: auto auto auto;
+* grid-template-columns: 200px 100px  100px 100px ;
+Se pueden usar porcentajes también
+Esto es una ventaja sobre bootstrap para no tener las 12 columnas.
+Se pueden manejar con porcentajes y columnas. Nos da medidas nuevas
+
+##### max-content min-content
+* grid-template-columns:100px 100px 100px max-content 100px ;
+
+###### fragment
 1fr dividde el tam�o extra en esa columna
-    grid-template-columns:100px 100px 100px min-content 100px 1fr;
-    grid-template-columns:1fr 1fr 1fr;
-    grid-template-columns:2fr 1fr 1fr;
-    grid-template-columns:2fr repeat(5,1fr); (repite cinco veces los fragments)
-    grid-template-rows: 200px 300px 50px;
+* grid-template-columns:100px 100px 100px min-content 100px 1fr;
+* grid-template-columns:1fr 1fr 1fr;
+* grid-template-columns:2fr 1fr 1fr;
+* grid-template-columns:2fr repeat(5,1fr); (repite cinco veces los fragments)
+* grid-template-rows: 200px 300px 50px;
 
-Con grid podemos ponerle en qu� columna deseas poner el contenido
+Con grid podemos ponerle en qué columna deseas poner el contenido
 
-features querys
-para dar opciones a los navegadores
+espacio entre ellas:
+* grid-column-gap:10px;
+* grid_row-gap:10px;
+* grid-gap:10px;  
 
-media query son breakpoints para est�los exspec�ficos
-@media screen and (max-witdh:600px){
-}
-tableta 768px
-celular 425px
-laptop 1024px
-laptop 1400
+Los media query son breakpoints para estílos específicos:
 
 @media screen and (max-width:600px){
     :root{
@@ -105,4 +122,15 @@ laptop 1400
     }
 }
 
+Medidas de dispositivos
+* tableta 768px
+* celular 425px
+* laptop 1024px
+* laptop 1400
+
 support(display:grid)
+
+### Juegos de aprendizaje
+[Flexbox Froggy](https://flexboxfroggy.com/#es)
+[Grid Garden]http://cssgridgarden.com/#es)
+[CSS Diner](https://flukeout.github.io/)
