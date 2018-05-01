@@ -1,14 +1,18 @@
 
 @media screen and (max-width: 768px) {
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
     :root {
       --prymary-color: #444444;
     }
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vh;
+    }
+    header {
+      width: 100vh;
+    }
     .nav {
+      width: 100vh;
       display: flex;
       justify-content: space-around;
       padding: 10px;
@@ -28,6 +32,7 @@
     }
     .cover {
       height: 100vh;
+      width: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -37,7 +42,7 @@
     }
     .slogan {
       height: 60vh;
-      width: 100vh;
+      width: 70vh;
       background-image: url("./img/slogan-shadow.png");
       background-repeat: no-repeat;
       background-size: 100% 100%;
@@ -45,15 +50,126 @@
 
     .stats {
       height: 100vh;
-      width: 100vh;
+      width: 95vh;
       display: grid;
       grid-template-columns:  repeat(2, 1fr);
       grid-template-rows:  repeat(2, 1fr);
-      grid-gap: 10px;
     }
     .stats-unit {
       width: 100%;
       height: 100%;
-      background-color: red;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .unit {
+      color: #0000dd;
+      line-height: 5px;
+      font-size: 80px;
+      font-weight: bold;
+    }
+    .unit-pink {
+      color: #aa3344;
+      line-height: 5px;
+      font-size: 80px;
+      font-weight: bold;
+    }
+    .stats-text {
+      padding: 5px;
+      font-size: 20px;
+      color: #999999;
+    }
+    .academy-text {
+      line-height: 5px;
+      font-size: 50px;
+    }
+    .scholarship {
+      margin: 10px 10px 10px 10px;
+      width: 100vh;
+      height: 100vh;
+      background-image: url("./img/beca.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .start-now {
+      width: 100vh;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .start-now h2 {
+      color: #0000ff;
+      font-size: 50px;
+      margin-left: 5px;
+    }
+    .start-now p {
+      margin-left: 5px;
+      font-size: 30px;
+    }
+    .start-now button {
+      color: white;
+      font-size: 50px;
+      background-color: #0000ff;
+      width: 100%;
+      height: 20%;
+      border-radius: 10px;
+      margin-left: 5px;
+    }
+    .programs {
+      height: 400vh;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 100px  repeat(4, 1fr);
+      grid-gap: 30px;
+    }
+    .programs-text {
+      line-height: 5px;
+      font-size: 50px;
+    }
+    .course-mobileweb {
+      width: 100%;
+      height: 100%;
+      background-image: url("./img/web-mobile-card-image.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-size: 100% 100%;
+    }
+    .course-cloud {
+      width: 100%;
+      height: 100%;
+      background-image: url("./img/cloud-architect-card-image.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-size: 100% 100%;
+    }
+    .course-front {
+      width: 100%;
+      height: 100%;
+      background-image: url("./img/front-end-card-image.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-size: 100% 100%;
+    }
+    .course-back {
+      width: 100%;
+      height: 100%;
+      background-image: url("./img/back-end-card-image.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      display: flex;
+      align-items: flex-end;
+    }
+    .course-description {
+      background-color: var(--prymary-color);
+      display: block;
+    }
+    .program-name {
+
+    }
+    .program-nivel {
+      margin-bottom: 0px;
     }
 }
