@@ -136,6 +136,6 @@ Medidas de dispositivos
 support(display:grid)
 
 ### Juegos de aprendizaje
-[Flexbox Froggy](https://flexboxfroggy.com/#es)
-[Grid Garden]http://cssgridgarden.com/#es)
-[CSS Diner](https://flukeout.github.io/)
+* [Flexbox Froggy](https://flexboxfroggy.com/#es)
+* [Grid Garden](http://cssgridgarden.com/#es)
+* [CSS Diner](https://flukeout.github.io/)
