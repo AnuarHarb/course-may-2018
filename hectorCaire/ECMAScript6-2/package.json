@@ -1,0 +1,19 @@
+{
+  "name": "env-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hectorCaire/course-may-2018/hectorCaire/ECMAScript6-2"
+  },
+  "author": "Héctor email-hector@mail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "yargs": "^11.0.0"
+  }
+}
