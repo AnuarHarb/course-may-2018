@@ -16,16 +16,25 @@
       width: 100%;
       display: flex;
       justify-content: space-around;
+      align-items: center;
       padding: 10px;
       color: white;
-      background-color: var(--prymary-color);
+      background-color: #59D1EF;
       font-size: 20px;
     }
-    .services {
-
+    .services span {
+      margin-right: 10px;
+    }
+    .services span:hover {
+      margin-right: 10px;
+      text-decoration: underline;
     }
     .apply-nav {
-
+      height: 50px;
+      width: 100px;
+      color: white;
+      background-color: #5CFE00;
+      border-radius: 5px;
     }
     .nav  i {
       display: none;
@@ -49,85 +58,101 @@
     }
 
     .stats {
-      height: 100vh;
-      width: 95vh;
+      width: 100%;
       display: grid;
-      grid-template-columns:  repeat(2, 1fr);
-      grid-template-rows:  repeat(2, 1fr);
+      grid-template-columns:  repeat(4, 15%);
+      justify-content: center;
+
     }
     .stats-unit {
       width: 100%;
-      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
     }
     .unit {
       color: #0000dd;
       line-height: 5px;
-      font-size: 80px;
+      font-size: 40px;
       font-weight: bold;
     }
     .unit-pink {
       color: #aa3344;
       line-height: 5px;
-      font-size: 80px;
+      font-size: 40px;
       font-weight: bold;
     }
     .stats-text {
       padding: 5px;
-      font-size: 20px;
+      font-size: 10px;
       color: #999999;
+    }
+    .academy-programs {
+      display: grid;
+      grid-template-columns: 20% 40%;
+      grid-column-gap: 20px;
+      justify-content: center;
+    }
+    .academy {
+      display: grid;
+      grid-template-rows: 50px repeat(2, 250px);
+      grid-row-gap: 30px;
+    }
+    .academy-text-container hr {
+      margin-right: 20px;
     }
     .academy-text {
       line-height: 5px;
-      font-size: 50px;
+      font-size: 30px;
     }
     .scholarship {
-      margin: 10px 10px 10px 10px;
-      width: 100vh;
-      height: 100vh;
+      margin-top: 0px;
+      width: 90%;
+      height: 100%;
       background-image: url("./img/beca.jpg");
       background-repeat: no-repeat;
       background-size: cover;
     }
     .start-now {
-      width: 100vh;
-      height: 100vh;
+      width: 100%;
+      height: 250px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
     .start-now h2 {
+      margin-top: 20px;
       color: #0000ff;
-      font-size: 50px;
+      font-size: 20px;
       margin-left: 5px;
     }
     .start-now p {
       margin-left: 5px;
-      font-size: 30px;
+      font-size: 10px;
     }
     .start-now button {
       color: white;
-      font-size: 50px;
-      background-color: #0000ff;
+      font-size: 10px;
+      background-color: #5CFE00;
       width: 100%;
       height: 20%;
       border-radius: 10px;
       margin-left: 5px;
     }
     .programs {
-      height: 400vh;
       display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 100px  repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows:   50px repeat(2, 250px);
       grid-gap: 30px;
+    }
+    .programs-text-container {
+      grid-column: 1/3
     }
     .programs-text {
       line-height: 5px;
-      font-size: 50px;
+      font-size: 30px;
     }
     .course-mobileweb {
       width: 100%;
@@ -138,7 +163,7 @@
       background-size: 100% 100%;
       display: flex;
       align-items: flex-end;
-      font-size: 25px;
+      font-size: 20px;
     }
     .course-cloud {
       width: 100%;
@@ -149,7 +174,7 @@
       background-size: 100% 100%;
       display: flex;
       align-items: flex-end;
-      font-size: 25px;
+      font-size: 20px;
     }
     .course-front {
       width: 100%;
@@ -160,7 +185,7 @@
       background-size: 100% 100%;
       display: flex;
       align-items: flex-end;
-      font-size: 25px;
+      font-size: 20px;
     }
     .course-back {
       width: 100%;
@@ -170,7 +195,7 @@
       background-size: 100% 100%;
       display: flex;
       align-items: flex-end;
-      font-size: 25px;
+      font-size: 20px;
     }
     .course-description {
       display: flex;
@@ -268,7 +293,7 @@
 
     .stats {
       height: 100vh;
-      width: 95vh;
+      width: 100vh;
       display: grid;
       grid-template-columns:  repeat(2, 1fr);
       grid-template-rows:  repeat(2, 1fr);
