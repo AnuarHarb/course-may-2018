@@ -11,7 +11,7 @@
 4. https://www.testdome.com/questions/javascript/closures/11099?visibility=1&skillId=2
 
 ### ECMA
-* [ECMA.org]http://www.ecma-international.org/ecma-262/6.0/
+* [ECMA.org](http://www.ecma-international.org/ecma-262/6.0/)
 
 ### javascript
 
