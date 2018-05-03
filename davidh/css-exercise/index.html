@@ -3,23 +3,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- this CDN code is for highlight js into html-->
+    <link rel="stylesheet" href="atom-one-dark.css">
+    <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
     <title>css-exercise</title>
   </head>
   <body>
     <header>
       <nav class="nav">
-        <p>central.academy</p>
+        <div class="nav-central">Central Academy</div>
         <div class="services">
-          <span>Nosotros</span>
-          <span>Programas</span>
-          <span>Becas</span>
-          <span>Contenidos</span>
+          <a class="services-item">NOSOTROS</a>
+          <a class="services-item">PROGRAMAS</a>
+          <a class="services-item">BECAS</a>
+          <a class="services-item">CONTENIDOS</a>
         </div>
         <button class="apply-nav" type="button">APLICA</button>
-        <i class="material-icons">dehaze</i>
+        <i class="large material-icons">dehaze</i>
       </nav>
+      <!-- can be use picture tag and its properties far make it easily -->
       <section class="cover">
         <div class="slogan">
         </div>
@@ -39,9 +45,13 @@
         <p class="stats-text">de alumnos consiguen trabajo</p>
       </div>
       <div class="stats-unit">
-        <p class="unit-pink">$18,000</p>
+        <!-- acord class methodology if a item changes put the diference then -->
+        <p class="unit--pink">$18,000</p>
         <p class="stats-text">Salario promedio a egresados del programa</p>
       </div>
+    </section>
+    <section class="codejs">
+      <pre><code> if( wantToWord == true ) return centraalAcademy(); </code></pre>
     </section>
     <div class="academy-programs">
       <section class="academy">
@@ -92,5 +102,8 @@
         </div>
       </section>
     </div>
+  <!-- highlight code CDN javascript methods -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
