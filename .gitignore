@@ -1,0 +1,4 @@
+**/*.log
+**/node_modules/
+.idea/
+hectorCaire/ECMAScript6-2/file.html
