@@ -7,34 +7,61 @@
     <title>Ceentral Academy</title>
   </head>
   <body>
-
-    <nav class="navegacion">
-        <li>
-            <ul>Ceentral Academy</ul>
-            <ul> <a href="#">Nosotros</a></ul>
-            <ul><a href="#">Programas</a></ul>
-            <ul><a href="#">Becas</a></ul>
-            <ul><a href="#">Contenido</a></ul>
-            <ul><button><Aplica></Aplica></button></ul>
-        </li>
-    </nav>
-
-    <article>
-        <p>+32   Becas Frontend y Backend</p>
-        <p>2 Sedes Guadalajara y Ciudad de México</p>
-        <p>85% De alumnos consiguen trabajo</p>
-        <p>$18,000 Salario promedio a egresados del programa</p>
-        <p>if( want to work == true ) return centraalAcademy();</p>
-    </article>
-
-      
-
-    <div><img src="img/homepage_cover.png" alt="homepage"></div>
-    <div><img src="img/back-end-card-image.png" alt="backend"></div>
-    <div><img src="img/Academy.png" alt="academy"></div>
-    <div><img src="img/cloud-architect-card-image.png" alt="cloud"></div>
-    <div><img src="img/front-end-card-image.png" alt="frontend"></div>
-    <div><img src="img/slogan-shadow.png" alt="slogan"></div>
-    <div><img src="img/web-mobile-card-image.png" alt="mobile"></div>
+    <header class="navbar">
+      <nav class="navbar__container">
+        <h2 class="navbar__title">centraal.Academy</h2>
+          <ul class="navbar__links">
+              <li class"navbar__item"><a class="navbar__item-link" href="#">nosotros</a></li>
+              <li class"navbar__item"><a class="navbar__item-link" href="#">programas</a></li>
+              <li class"navbar__item"><a class="navbar__item-link" href="#">becas</a></li>
+              <li class"navbar__item"><a class="navbar__item-link" href="#">contenido</a></li>
+          </ul>
+          <div>
+            <button class="navbar__button">aplica</button>
+            <button class="navbar__button-mobile">x</button>
+          </div>
+      </nav>
+    </header>
+    <section class="cover">
+      <picture class="cover__picture">
+        <source media="(max-width: 768px)" srcset="img/slogan-shadow.png">
+        <img src="" alt="">
+      </picture>
+    </section>
+    <section class="stats">
+      <div class="content">
+        <article class="stats_numbers">
+          <div class="stats_item"><h5 class="stats_item-title">+32</h5><p>Becas Frontend <br>y Backend</p></div class="stats_item">
+          <div class="stats_item"><h5 class="stats_item-title">2</h5><p>Sedes Guadalajara <br>y Ciudad de México</p></div>
+          <div class="stats_item"><h5 class="stats_item-title">85%</h5><p>De alumnos <br>consiguen trabajo</p></div>
+          <div class="stats_item"><h5 class="stats_item-title--green">$18,000</h5><p>Salario promedio a <br>egresados del programa</p></div>
+        </article>
+      </div>
+        <article class="code-slogan">
+          <span class="code-slogan__operator">if </span>
+          <span class="code-slogan__sign">(</span>
+          <span class="code-slogan__text"> want to work</span>
+          <span class="code-slogan__logic"> == </span>
+          <span class="code-slogan__object">true</span>
+          <span class="code-slogan__sign">)</span>
+          <span class="code-slogan__operator"> return</span>
+          <span class="code-slogan__object"> centraalAcademy()</span>
+          <span class="code-slogan__sign">;</span>
+        </article>
+    </section>
+    <section class="programs">
+      <div class"content programs__grid">
+        <h2 class="programs__title">academy</h2>
+        <h2 class="programs__title">programas</h2>
+        <picture class"programs__card programs__card-background--front">
+          <img class="programs__image" src="img/Academy.png" alt="academy">
+        </picture>
+        <article class="programs__card">
+          <div class="programs__card-div">
+            <h5 class="programs__card-title frontend">Front <br>end</h5>
+            <p>pricipiante</p>
+        </article>
+      </div>
+    </section>
   </body>
 </html>
