@@ -255,7 +255,7 @@
       padding-left: 30px;
       width: 100%;
       height: 35%;
-      background-color: var(--prymary-color);
+      background-color: #444444;
     }
     .program-name-mobileweb {
       margin: 0;
@@ -318,11 +318,11 @@
     body {
       margin: 0;
       padding: 0;
-      width: 100%;
+      width: 100vh;
       font-family: var(--arimo-fonts) ;
     }
     header {
-      width: 100%;
+      width: 100vh;
       margin: 0;
     }
     /*

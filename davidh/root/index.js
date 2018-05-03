@@ -1,36 +1,34 @@
 'use strict';
-// use this syntax on termina for choose de env: node index.js --env=enviroment
+/* Vars*/
+// use this syntax on terminaL for choose de env: node index.js --env=enviroment
 const args = require('yargs').argv;
 const fs = require('fs');
 
-// ************************************ funtions *********************************************
-// this is a asynchronous function that obtains a json data of enviroment
+/* Funtions */
+// this is a synchronous function that obtains a json data of enviroment
 const confEnv = (env) => {
   const enviroment = require(`./env/${env}.json`);
   let template;
 
   try {
-      template = fs.readFileSync('template.txt', 'utf8'); // get template.txt
+    template = fs.readFileSync('template.txt', 'utf8'); // get template.txt
   } catch(error) {
-    console.log('Error:', error);
+    console.error( `Error: ${error}`);
   }
 };
 
-//************************************** main program ****************************************
+/* main program */
 // switch the arg env of terminal for make the new output file
 switch (args.env) {
   case 'dev':
-    console.log('configurando entorno de desarrollo...');
     confEnv('dev');
     break;
   case 'qa':
-    console.log('configurando entorno de QA...');
     confEnv('qa');
     break;
   case 'prod':
-    console.log('configurando entorno de produccion...');
     confEnv('prod');
     break;
   default:
-    console.log('no se eligió un entorno válido');
+    console.error('No se ha elegido un entorno válido');
 }
