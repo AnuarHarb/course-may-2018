@@ -1,0 +1,34 @@
+Git --> es un repositorio
+
+pwd --> me indica la ruta donde me encuentro.
+
+cd --> me lleva a mi ruta raiz
+
+cd carpeta --> abre una carpeta
+
+cd .. --> me saca del directorio de donde me encuetro me pasa al antencesor.
+
+clear --> borra la pantalla
+
+touch --> crea archivos touch archivo.txt
+
+rm --> borra archivo rm archivo.txt
+
+mkdir --> crea un drirectorio o carpeta mkdir carpeta_new
+
+open --> abre archivo solo sirve en sistema operativo linux
+
+notepad --> abre el archivo en notepad de windows notepad archivo.txt
+
+rm -rf --> borra carpeta con todo y archivos.
+
+gitHub --> es un aplicativo grafico para trabajar con git en red.
+
+git status --> Muestra el estus del repositorio
+
+git remote -v --> Muestra los repositorios remotos
+
+git remote add --> git remote add http://www..  agrega un reposito remoto
+
+git clone --> git clone http://www... clona repositorio web en git local.
+
