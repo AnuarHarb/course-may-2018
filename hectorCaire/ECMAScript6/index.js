@@ -1,38 +1,34 @@
 //iife  inmidiatly invoke function expression
 (function(){
-    'use strict'; //Establece el uso estricto de jScript
+    'use strict';
 
-    const API_URL='datos.json';
-    const tabla = document.querySelector('.tabla');
+    const API_URL='data.json';
+    const table = document.querySelector('.table');
 
     fetch(API_URL)
       .then(response => response.json())
-      .then(response => printResponse(response.datos))
-      .catch(err=>console.log('Fallaste en la pentición ' + err));
+      .then(response => printResponse(response.data))
+      .catch(err=>console.log('Petition failed ' + err));
 
 
-    function printResponse(datos){
-      let encabezado ="";
-      let contenido=""
-
-      encabezado=`<div class="row encabezado">
+    const printResponse=(data) => {
+      const header =`<div class="row header">
       <div>Atributo</div>
       <div>Valor</div>
-      </div>`
+      </div>`;
+      let content="";
 
 
-      datos.forEach((value,index)=>{
-        contenido+='<div class="row">';
-        let atributo;
-        console.log(value);
-        for (atributo in value){
-            contenido+=`<div><b>${atributo}</b></div>`;
-            contenido+=`<div>${value[atributo]}</div>`;
-        }
-        //contenido+=`<div>${index}</div`;
-        contenido+='</div>';
-      });
-      tabla.innerHTML=encabezado+contenido;
+      for (value of data){
+        content+='<div class="row">';
+        for (const attribute in value){
+            content+=`<div><b>${attribute}</b></div>`;
+            content+=`<div>${value[attribute]}</div>`;
+          }
+        content+='</div>';
+      }
+
+      table.innerHTML=header+content;
 
     }
 })();
