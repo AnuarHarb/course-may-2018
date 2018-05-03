@@ -1,0 +1,9 @@
+{
+  "env": "prod",
+  "client": "postgreSQL",
+  "port": 443,
+  "host"     : "www.aws.instance.com",
+  "user"     : "amazon-user",
+  "password" : "89#$%$fggfg123465.re",
+  "database" : "amazonappinstancedb"
+}

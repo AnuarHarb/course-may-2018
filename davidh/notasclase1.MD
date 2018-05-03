@@ -1,14 +1,14 @@
 # Clase 1 curso de Polymer
 
 ### En el curso de hoy vimos comandos de unix como:
-  * mkdir: para crear carpetas
-  * touch: para crear archivos
-  * ls: para listar archivos
-  * pwd: para ver donde nos enconteramos
-  * cd: para cambiar de ruta
-  * rm: para remover archivos
-  * mv: para mover archivos
-  * cp: para mover archivos
+  * **mkdir**: para crear carpetas
+  * **touch**: para crear archivos
+  * **ls**: para listar archivos
+  * **pwd**: para ver donde nos enconteramos
+  * **cd**: para cambiar de ruta
+  * **rm**: para remover archivos
+  * **mv**: para mover archivos
+  * **cp**: para mover archivos
 
 ### Además vimos como trabajar con git:
 
@@ -20,4 +20,5 @@
   * Podemos ver el historial de nuestros cambios con el comando **git log**
   * Podemos agregar un repositorio para trabajar distribuidamente con **git remote add origin repositoryUrl**
   * Ahora podemos bajas y subir cambios en nuestro repositotio remoto con **git push y git pull**
-  *
+  * para localizar los cambios entre archivos usamos **git diff HEAD**
+  * utilizamos para hacer una diferencia uzamos **git diff --staged**
