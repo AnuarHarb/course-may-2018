@@ -1,0 +1,27 @@
+[
+  {
+    "color":  "black",
+    "type":   "primary",
+    "hex":    "#000"
+  },
+  {
+    "color":  "white",
+    "type":   "primary",
+    "hex":    "#FFF"
+  },
+  {
+    "color":  "blue",
+    "type":   "primary",
+    "hex":    "#00F"
+  },
+  {
+    "color":  "yellow",
+    "type":   "primary",
+    "hex":    "#FF0"
+  },
+  {
+    "color":  "green",
+    "type":   "secondary",
+    "hex":    "#0F0"
+  }
+]
