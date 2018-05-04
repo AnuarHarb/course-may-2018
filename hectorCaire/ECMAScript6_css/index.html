@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+<body>
+<section class="main">
+  <h1 class="main__title">Progreso</h1>
+  <div class="main__progress-bar">
+    <div class="main__progress-bar--progress main__progress-bar--slow"></div>
+  </div>
+  <button class="button main__button">Ejecutar</button>
+</section>
+<section class="modal modal--hidden">
+  <div class="modal__background"></div>
+  <div class="modal__card">
+    <h2 class="modal__title">Selecione la velocidad</h2>
+    <form action="" class="speed__form">
+      <ul class="speed__form__list">
+        <li><input type="radio" id="radioSlow" name="speed__form__radio" class="speed__form__radio" value="main__progress-bar--slow">
+        <label for="radioSlow">Lento</label></li>
+        <li><input type="radio" id="radioRegular" name="speed__form__radio" class="speed__form__radio" checked value="main__progress-bar--regular">
+        <label for="radioRegular">Normal</label></li>
+        <li><input type="radio" id="radioFast" name="speed__form__radio" class="speed__form__radio" value="main__progress-bar--fast">
+        <label for="radioFast">Rápido</label></li>
+      </ul>
+
+
+
+
+      <input type="button" value="Activar" class="button form__button">
+    </form>
+  </div>
+</section>
+<script src="scripts.js" charset="utf-8"></script>
+</body>
+</html>
