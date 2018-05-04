@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* :root sirve para definir variables globales con css sin necesidad de usar sass */
+:root {
+  --primary: #33e8db;
+  --normal-size: 14px;
+}
+.flex {
+  display: flex; /* display flex afectará a los hijos del nodo donde se declara*/
+  height: 300px;
+  justify-content: space-evenly; /* como se organizara el contenido */
+  flex-wrap: wrap-reverse; /* indica que acción se realizará al desvordarse*/
+  align-items: center; /* parecido a justify-content pero verticalmente */
+}
+
+.display-props {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: var(--primary); /* la siguiente sintaxis sirve para usar las variables declaradas */
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid black;
+  /* Box sizing para no perder propiedades de padding*/
+  box-sizing: border-box;
+  font-size: var(--normal-size);
+}
+
+/************* Dispaly grid es una nueva forma de ordenar elementos de css **********************/
+
+.grid {
+  display: grid; /* display flex afectará a los hijos del nodo donde se declara y acepta propiedades de flex box*/
+   /* *
+   *  número de columnas y tamaño, max-content utiliza el maximo tamaña, 1fr utiliza el espacio que queda
+   *  dividiendo el espacio con otros fracmentos en partes iguales, la sentencia repeat nos sirve para repetir
+   *  grillas iguales
+   */
+  grid-template-columns:  2fr, 1fr;
+  /* columns grids */
+  grid-template-rows: 200px repeat(2, 1fr);
+  grid-column-gap: 10px; /* espacio entre grillas, grid-gap es espaciado global */
+  height: 300px;
+}
+
+.display-grid {
+  width: 100%;
+  height: 100px;
+  background-color: var(--primary); /* la siguiente sintaxis sirve para usar las variables declaradas */
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid black;
+  /* Box sizing para no perder propiedades de padding*/
+  box-sizing: border-box;
+  font-size: var(--normal-size);
+}
+
+.display-grid-3 {
+  grid-column: 1/3; /* indica el inicio y limite de lo que ocupará en el sistema de grillas*/
+  grid-row: 1/2;
+  width: 100%;
+  height: 100px;
+  background-color: var(--primary); /* la siguiente sintaxis sirve para usar las variables declaradas */
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid black;
+  /* Box sizing para no perder propiedades de padding*/
+  box-sizing: border-box;
+  font-size: var(--normal-size);
+}
+
+/* Para agregar soporte para navegadores podemos utilizar:*/
+@supports not (dispaly:grid) { /* La siguiente sentencia significa que sí no soporta grid hará lo siguiente:*/
+
+}
+/* indica como se mostrará el elemento en el tamaño indicado, pantallas desktop pequeñas */
+@media screen and (max-width: 768px) {
+  /* El media es un nuevo scope donde podemos definir nuevas variables */
+  :root {
+    --primary: #ff3306;
+    --normal-size: 16px;
+  }
+
+  .display-grid-3 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    width: 100%; /* al ser pequeño ocupe el 100% de las grillas que abarque*/
+    height: 100px;
+    background-color: var(--primary); /* la siguiente sintaxis sirve para usar las variables declaradas */
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    /* Box sizing para no perder propiedades de padding*/
+    box-sizing: border-box;
+    font-size: var(--normal-size);
+  }
+}
+
+/* indica como se mostrará el elemento en el tamaño indicado, pantallas de celular */
+@media screen and (max-width: 425px) {
+  /* El media es un nuevo scope donde podemos definir nuevas variables */
+  :root {
+    --primary: #45f209;
+    --normal-size: 20px;
+  }
+
+  .display-grid-3 {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    width: 50%; /* al ser muy pequeño ocupe el 50% de las grillas que abarque*/
+    height: 100px;
+    background-color: var(--primary); /* la siguiente sintaxis sirve para usar las variables declaradas */
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    /* Box sizing para no perder propiedades de padding*/
+    box-sizing: border-box;
+    font-size: var(--normal-size);
+  }
+}
+
+/* Nota: en media queries podemos tener medidas maximas con max-width y minimas con min-width*/
+
+/* Reto: */

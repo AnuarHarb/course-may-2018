@@ -25,11 +25,29 @@
         </li>
       </ul>
       <div>
-        <button class="navbar__button">Aplica</button>
+        <button class="navbar__button modal__botton">Aplica</button>
         <button class="navbar__button-mobile">x</button>
       </div>
     </nav>
   </header>
+
+  <section class="sidemenu sidemenu--hidden">
+    <button class="navbar__button-mobile">x</button>
+    <ul class="navbar__links--mobile">
+      <li class="navbar__item--mobile">
+        <a class="navbar__item-link--mobile" href="">Nosotros</a>
+      </li>
+      <li class="navbar__item--mobile">
+        <a class="navbar__item-link--mobile" href="">Programas</a>
+      </li>
+      <li class="navbar__item--mobile">
+        <a class="navbar__item-link--mobile" href="">Becas</a>
+      </li>
+      <li class="navbar__item--mobile">
+        <a class="navbar__item-link--mobile" href="">Conetenis</a>
+      </li>
+    </ul>
+  </section>
 
   <section class="cover">
     <picture class="cover__picture">
@@ -97,7 +115,7 @@
       <article class="programs__action-card">
         <h6>Comienza ahora</h6>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo soluta natus ad odit unde neque tenetur molestiae</p>
-        <button class="navbar__button">Aplica</button>
+        <button class="navbar__button modal__botton">Aplica</button>
       </article>
       <article class="programs__card programs__card-background--front">
         <div class="programs__card-div">
@@ -113,5 +131,23 @@
       </article>
     </div>
   </section>
+
+  <section class="modal modal--hidden">
+    <div class="modal__background hide-modal"></div>
+    <div class="modal__card">
+      <span class="hide-modal">X</span>
+      <h4>Mi modal</h4>
+      <form>
+        <label for="name">Nombre</label>
+        <input id="name" type="text" name="name" value="">
+        <label for="email">Mail</label>
+        <input id="email" type="text" name="email" value="">
+        <input type="button" value="Send">
+      </form>
+    </div>
+
+  </section>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
