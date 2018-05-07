@@ -12,6 +12,7 @@
 
 ### ECMA
 * [ECMA.org](http://www.ecma-international.org/ecma-262/6.0/)
+* [ECMAScript 6 — New Features: Overview & Comparison](http://es6-features.org/#StatementBodies)
 
 ### javascript
 
@@ -36,3 +37,7 @@
 * [Flexbox Froggy](https://flexboxfroggy.com/#es)
 * [Grid Garden](http://cssgridgarden.com/#es)
 * [CSS Diner](https://flukeout.github.io/)
+
+### Web components
+* [Web components](https://www.webcomponents.org/)
+* [Cells](https://github.com/BBVA/1-ninjahack/wiki/Introducci%C3%B3n-a-Cells)
