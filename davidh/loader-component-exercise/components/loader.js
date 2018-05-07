@@ -30,15 +30,15 @@ class LoaderBar extends HTMLElement {
 
   // with this function render our module with the mode chosen
   render(mode) {
-    if (mode==1) { // mode 1, only random buttons.
+    if (mode==='1') { // mode 1, only random buttons.
       this.shadowRoot.querySelector('.content__speed-buttons').classList.add('hide');
       this.configComponent(); // config js functions
     }
-    else if (mode==2) { // mode 2, only speed select buttons.
+    else if (mode==='2') { // mode 2, only speed select buttons.
       this.shadowRoot.querySelector('.content__speed-button--random').classList.add('hide');
       this.configComponent(); // config js functions
     }
-    else if(mode==3) { // mode 3, union of mode 1 & 2.
+    else if(mode==='3') { // mode 3, union of mode 1 & 2.
       this.configComponent(); // config js functions
     }
     else { // default log warnning & config mode 3.
