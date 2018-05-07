@@ -1,0 +1,35 @@
+<script>
+  (function(customElements) {
+    'use strict';
+
+    class HelloComponent extends HTMLElement {
+      constructor() {
+        super();
+        this.myName;
+
+        const shadowRoot = this.attachShadow({mode: 'open'});
+
+        shadowRoot.innerHTML = `
+          <style>
+            h1 {
+              color: blue;
+              font-size: 40px;
+            }
+          </style>
+          <h1>Hola ${this.myName}</h1>
+          <p>Mi primer component vanilla</p>
+        `;
+      }
+
+      get myName() {
+        return this.getAttribute('my-name') || 'nombre default';
+      }
+
+      changeName(otherName) {
+        console.log(otherName);
+      }
+    }
+
+    customElements.define('hello-component', HelloComponent);
+  })(window.customElements);
+</script>

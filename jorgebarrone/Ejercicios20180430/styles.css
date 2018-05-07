@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 5px;
+}
+
+:root {
+  --primary: #33e8db;
+  --normal-size: 14px;
+}
+
+.section1{
+  display: grid;
+  /* grid-template-columns: auto auto auto auto auto auto; */
+  grid-template-columns: repeat(6, 1fr);
+  /* grid-template-rows: 300px 100px 100px 200px 200px; */
+  grid-gap: 5px;
+  width: 100%;
+}
+
+.section2{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+
+}
+
+.divHdr {
+  grid-column: 1 / 7;
+  background-image: url("./img/homepage__cover.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--normal-size);
+  height: auto;
+}
+
+img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+}
+
+.divBlue {
+  font-size: 25px;
+  font-weight: bold;
+  font-style: normal;
+  color: #5598e6;
+}
+
+.divGreen {
+  font-size: 25px;
+  font-weight: bold;
+  font-style: normal;
+  color: #5ed296;
+}
+
+.TxtSmall {
+  font-size: 10px;
+  color: gray;
+}
+
+.TxtBig {
+  font-size: 25px;
+  font: arial;
+  font-weight: bold;
+  color: black;
+}
+
+@media screen and (min-width: 768px) {
+:root {
+  --normal-size: 20px;
+}
+  .div3 {
+    grid-row: 3/4;
+  }
+}
+
+
+
+@media screen and (min-width: 320px) {
+  .div3 {
+
+  }
+}
+
+@supports not (display:grid) {
+  .div3 {
+
+  }
+}

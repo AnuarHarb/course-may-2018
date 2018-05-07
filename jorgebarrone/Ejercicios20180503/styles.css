@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --action-color-active: #04D923;
+}
+
+body {
+  background-color: # ;
+  font-family: arial;
+}
+
+button {
+
+}
+
+.myProgress {
+    width: 100%;
+    background-color: grey;
+}
+.myBar {
+    width: 1%;
+    height: 30px;
+    background-color: green;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Controls Styles */
+.controls {
+  padding: 20px 20px 20px 20px;
+  background-color: linear-gradient(rgba(0,0,40,.5), rgba(0,0,40,.5));
+}
+.controls__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px 20px 20px;
+}
+/* Controls Styles Ends */
+
+.normal__button {
+  font-size: 20px;
+  width: 100px;
+  border-radius: 4px;
+  padding: 10px 10px 10px 10px;
+  background-color: blue;
+  transition: transform .6s;
+}
+.normal__button--disabled {
+  pointer-events: none;
+  color: gray;
+  background-color: #ddd;
+}
+.normal__button:hover {
+  cursor: pointer;
+}
+
+.normal__button:active {
+  transform: translateY(5px);
+}
+
+.normal__button:focus {
+  outline: none;
+}
+
+.slow__button {
+  font-size: 20px;
+  width: 100px;
+  border-radius: 4px;
+  padding: 10px 10px 10px 10px;
+  transition: transform .6s;
+  background-color: red ;
+}
+.fast__button {
+  font-size: 20px;
+  width: 100px;
+  border-radius: 4px;
+  padding: 10px 10px 10px 10px;
+  transition: transform .6s;
+  background-color: green;
+}

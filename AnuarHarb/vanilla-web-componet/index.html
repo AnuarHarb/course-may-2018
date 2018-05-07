@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Web Component</title>
+  <link rel="import" href="hello-component.html">
+</head>
+<body>
+
+  <hello-component my-name="juan"></hello-component>
+  <hello-component></hello-component>
+
+
+  <script>
+
+    const inputName = document.getElementById('inputName');
+    const button = document.getElementById('button');
+    const helloComponent = document.querySelector('hello-component');
+
+    button.addEventListener('click', () => {
+      const nameValue = inputName.value
+      helloComponent.changeName(nameValue);
+    })
+
+  </script>
+
+</body>
+</html>

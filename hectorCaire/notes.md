@@ -21,10 +21,27 @@
 - git commit -m [mensaje] : Se da commit a los cambios pendientes por subir.
 - git push [remote] [branch] : Se suben cambios a remote especificado
 
+###
+
 ## Referencias
 
 https://dillinger.io/
+
 dillinger.io
 
 Online Markdown Editor - Dillinger, the Last Markdown Editor ever.
 Dillinger is an online cloud based HTML5 filled Markdown Editor. Sync with Dropbox, Github, Google Drive or OneDrive. Convert HTML to Markdown. 100% Open Source!
+
+http://es6-features.org/#StatementBodies
+
+http://www.ecma-international.org/ecma-262/6.0/
+
+https://codeburst.io/foreach-vs-for-of-vs-for-in-tug-of-for-d8f935396648
+
+codeburst
+
+
+forEach vs for-of vs for-in : Tug of for – codeburst
+Ladies & Gentlemen, Welcome to Tug of for. Introducing first, standing to my left, weighing in at 82 kgs, from Array family, forEach {loud…
+Reading time
+4 min read

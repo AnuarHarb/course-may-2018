@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Document</title>
+</head>
+<body>
+  <header class="navbar">
+    <nav class="navbar__container">
+      <h2 class="navbar__title">Centraal.academy</h2>
+      <ul class="navbar__links">
+        <li class="navbar__item"><a class="navbar__item-link" href="#">Nosotros</a></li>
+        <li class="navbar__item"><a class="navbar__item-link" href="#">Programas</a></li>
+        <li class="navbar__item"><a class="navbar__item-link" href="#">Becas</a></li>
+        <li class="navbar__item"><a class="navbar__item-link" href="#">Contenidos</a></li>
+      </ul>
+      <div>
+        <button class="navbar__button modal__button">Aplica</button>
+        <button class="navbar__button-mobile">x</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="sidemenu sidemenu--hidden">
+    <button class="navbar__button-mobile">x</button>
+    <ul class="navbar__links--mobile">
+      <li class="navbar__item--mobile"><a class="navbar__item-link--mobile" href="#">Nosotros</a></li>
+      <li class="navbar__item--mobile"><a class="navbar__item-link--mobile" href="#">Programas</a></li>
+      <li class="navbar__item--mobile"><a class="navbar__item-link--mobile" href="#">Becas</a></li>
+      <li class="navbar__item--mobile"><a class="navbar__item-link--mobile" href="#">Contenidos</a></li>
+    </ul>
+  </section
+
+
+  <section class="cover">
+    <picture class="cover__picture">
+      <!-- <source media="(max-width: 768px)" srcset="" ></source> -->
+      <img class="cover__image" src="img/slogan-shadow.png" alt="imagen de portada">
+    </picture>
+  </section>
+
+  <section class="stats">
+    <div class="content">
+      <article class="stats__numbers">
+        <div class="stats__item">
+          <h5 class="stats__item-title">+32</h5>
+          <p>Becas FrontEnd <br> y BackEnd</p>
+        </div>
+        <div class="stats__item">
+          <h5 class="stats__item-title">2</h5>
+          <p>Sedes Guadalajara y Ciudad de Mexico</p>
+        </div>
+        <div class="stats__item">
+          <h5 class="stats__item-title">85%</h5>
+          <p>De Alumnos consiguen trabajo</p>
+        </div>
+        <div class="stats__item">
+          <h5 class="stats__item-title--green">$18,000</h5>
+          <p>Salario promedio a egresados del Programa</p>
+        </div>
+      </article>
+      <article class="code-slogan">
+        <p>
+          <span class="code-slogan__operator">if</span>
+          <span class="code-slogan__sign">(</span>
+          <span class="code-slogan__text">wantToWork</span>
+          <span class="code-slogan__sign">==</span>
+          <span class="code-slogan__object">true</span>
+          <span class="code-slogan__sign">)</span>
+          <span class="code-slogan__operator">return</span>
+          <span class="code-slogan__object">centraalAcademy()</span>
+          <span class="code-slogan__object">;</span>
+        <p>
+      </article>
+    </div>
+  </section>
+
+  <section class="programs">
+    <div class="content programs__grid">
+      <h2 class="programs__title">Academy</h2>
+      <h2 class="programs__title--double">Programas</h2>
+      <picture class="programs__card">
+        <img class="programs__image" src="img/academy.png" alt="academy.png" />
+      </picture>
+      <article class="programs__card programs__card-background--front ">
+        <div class="programs__card-div">
+          <h5 class="programs__card-title--front">Front <br> End</h5>
+          <p class="programs__card-text">Principiante</p>
+        </div>
+      </article>
+      <article class="programs__card programs__card-background--back ">
+        <div class="programs__card-div">
+          <h5 class="programs__card-title--back">Back <br> End</h5>
+          <p class="programs__card-text">Principiante</p>
+        </div>
+      </article>
+      <article>
+        <p class="programs__card-title--comienza">¡Comienza ahora!</p>
+        <p class="programs__card-title--invitacion">Forma parte de la proxima generacion de desarrolladores que crearan las plataformas y productos que tendrán un impacto en el siguiente billón de Usuarios.</p>
+        <p class="programs__card-title--invitacion">Contamos con nivel básico y avanzado.</p>
+        <button class="navbar__button modal__button">Aplica</button>
+      </article>
+      <article class="programs__card programs__card-background--mobile ">
+        <div class="programs__card-div">
+          <h5 class="programs__card-title--mobile">Mobile Web<br> Specialist</h5>
+          <p class="programs__card-text">Avanzado</p>
+        </div>
+      </article>
+      <article class="programs__card programs__card-background--cloud">
+        <div class="programs__card-div">
+          <h5 class="programs__card-title--cloud">Cloud <br> Architect</h5>
+          <p class="programs__card-text">Avanzado</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="modal modal__hidden">
+    <div class="modal__background hide-modal"></div>
+    <div class="modal__card">
+      <span class="hide-modal">X</span>
+      <h4>Mi Modal</h4>
+      <form>
+        <label for="name">Nombre</label>
+        <input id="name" type="text" name="name" value="" >
+        <label for="email">Mail</label>
+        <input id="email" type="email" name="email" value="" >
+        <input type="button" value="Send"  >
+      </form>
+    </div>
+  </section>
+
+
+
+  <script src="scripts.js"></script>
+</body>
+</html>
