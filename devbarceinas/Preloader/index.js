@@ -8,7 +8,7 @@
     const element = document.getElementById('myBar');
 
     move.addEventListener('click', () => {
-        let randomVelocy = Math.floor((Math.random() * 50) + 1);
+        let randomVelocy = Math.round((Math.random() * 50) + 1);
         let width = 1;
         let id = setInterval(() => {
             if (width >= 100) {
@@ -21,7 +21,6 @@
                 width++; 
                 element.style.width = `${width}%`; 
             }
-        console.log(randomVelocy);
         }, randomVelocy);
     }); 
 
