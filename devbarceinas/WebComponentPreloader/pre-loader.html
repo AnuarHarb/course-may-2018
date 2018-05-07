@@ -1,0 +1,113 @@
+<html>
+	<template id="preLoader">
+		<!-- Style of my component -->
+		<style>
+			.preloader {
+				display: grid;
+				grid-template-columns: repeat(1, 1fr); 
+				grid-template-rows: 1; 
+				grid-gap: 10px;
+				padding: 10%;
+			}
+
+			.preloader__button {
+				display: flex;
+				justify-content: center;
+			}
+
+			.button-preloader {
+				border-radius: 5px;
+				border: none;
+				background-color: #C9283E;
+				color: #eee;
+				padding: 20px 50px;
+				font-size: 18px;
+				font-weight: bold;
+				font-family: Arial;
+				text-transform: uppercase;
+			}
+
+			.button-preloader:hover {
+				cursor: pointer;
+				background-color: #F0433A;
+				transition: all 0.4s;
+			}
+
+			.button-preloader:active {
+				transform: translateY(3px);
+			}
+
+			.button-preloader:focus {
+				outline: none;
+			}
+
+			@media screen and (max-width: 320px) {
+				.preloader {
+					grid-template-columns: repeat(1, 1fr);
+					grid-template-rows: repeat(1, 100px);
+					margin-top: 25%;
+				}
+			}
+
+			/* Bar styles */
+			.my__progress {
+				width: 100%;
+				background-color:#2E112D;
+			}
+			.my__bar {
+				width: 0%;
+				height: 5px;
+				background-color: #F0433A;
+			}
+		</style>
+		<!-- Estructure of my component -->
+		<div class="my__progress">
+			<div class="my__bar"></div>
+		</div>
+		<section class="preloader">
+			<div class="preloader__button">
+					<button class="button-preloader" id="move">Cargar</button>
+			</div>
+		</section> 
+	</template>
+	<script>
+		(function(customElements) {
+
+			'use strict';
+
+			class PreLoader extends HTMLElement {
+				constructor() {
+					super();
+					this.importDocument = document.currentScript.ownerDocument;
+				}
+
+				connectedCallback() {
+					let shadowRoot = this.attachShadow({mode: 'open'});
+					const t = this.importDocument.querySelector('#preLoader'),
+							instance = t.content.cloneNode(true);
+							shadowRoot.appendChild(instance);
+					const move = shadowRoot.querySelector('#move'),
+							element = shadowRoot.querySelector('.my__bar');
+
+					if(move) {
+						move.addEventListener('click', () => {
+							let width = 1,
+								velocy = Math.round((Math.random() * 50) + 1),
+								interval = setInterval(() => {
+									if (width >= 100) {
+										clearInterval(interval);
+									} else {
+										width++;
+										element.style.width = `${width}%`;
+									}
+								}, velocy);
+						});
+					}
+				}
+			}
+
+			customElements.define('pre-loader', PreLoader);
+
+		})(window.customElements);
+	</script>
+</html>
