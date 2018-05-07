@@ -7,7 +7,7 @@ Horario 2 a 6 pm.
 Desarrollador Frontend. Gusto por la interacción con el usuario
 
 ## Alfonso Ríos
-3er semestre de ingeniería trunca. 6 años programando. Tiene 22 años.
+3er semestre de ingeniería trunca. 6 años programando. Tiene 22 años. Ironbit
 
 ****
 
@@ -51,7 +51,7 @@ Desarrollador Frontend. Gusto por la interacción con el usuario
 2. Héctor
 3. Carlos
 4. José Luis
-5.  
+5. Oscar
 6. Mario
 7. Mario
 8. Jorge

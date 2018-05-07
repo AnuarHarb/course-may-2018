@@ -10,13 +10,6 @@
 ```
 El contenido es el que se ajusta y no el elemento contenedor normalize también se puede usar  al incio
 
-#### Atom pluggins
-* emmet
-* pigment
-* file-icons
-* linter 2.2.0
-* atom_beautify
-
 ##### Elementos html5
 * articles elementos específifcos
 * headers definir el encabezado de la página
@@ -162,7 +155,7 @@ const myFunction = () => {
 Cada vez que se repite el cicclo no se le asigna el nuevo valor de la iteración. Se crea una nueva instancia
 y se destruye la anterior.
 
-### .gitignorea
+### .gitignore
 Los archivos que se deben excluir:
 * dependencias
 * logs
