@@ -1,0 +1,129 @@
+<template id="loader">
+  <style media="screen">
+    .body {
+      --primary-color: rgb(0,198,255);
+      --primary-color-opacity: rgba(0,155,242,.8);
+      --secundary-color: rgb(0, 102, 255);
+      --strong-gray: #4e4e4e;
+      --gray:  #ccc;
+      --ligth-gray: #eee;
+      background-color: var(--ligth-gray);
+      margin: 0;
+      color: var(--strong-gray);
+      font-size: 28px;
+      font-family: 'Skranji', cursive;
+    }
+    /* this class is used for hide elements */
+    .hide {
+      display: none !important;
+    }
+
+    .header {
+      width: 100%;
+      background-color: var(--primary-color);
+    }
+
+    .header__title {
+      text-align: center;
+      margin: 5px 0px 5px 0px;
+    }
+
+    .header__instructions {
+      text-align: center;
+      margin: 5px 0px 15px 0px;
+      font-weight: 100;
+    }
+
+    .progress__container {
+      width: 100%;
+      height: 8px;
+      background: var(--gray);
+    }
+
+    .progress__bar {
+      height: 8px;
+      background: var(--secundary-color);
+      width: 0%;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 50px;
+    }
+
+    .content__speed-buttons {
+      display: flex;
+      justify-content: space-around;
+      margin: 50px auto 0 auto;
+      width: 80%;
+    }
+
+    .content__speed-button--random {
+      display: flex;
+      justify-content: center;
+      margin: 50px auto 0 auto;
+      width: 80%;
+    }
+
+    .button__load {
+      background-color: var(--primary-color);
+      color: var(--strong-gray);
+      width: 250px;
+      height: 50px;
+      border: none;
+      border-radius: 5px;
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-size: 20px;
+      transition: transform .4s;
+    }
+
+    .button__load:focus {
+      outline: none;
+    }
+
+    .button__load:hover {
+      cursor: pointer;
+      background-color: var(--primary-color-opacity);
+    }
+
+    .button__load:active {
+      /* when active it will be move 5px on Y axis*/
+      transform: translateY(3px);
+    }
+
+    /* Responsive buttons */
+    @media (max-width: 992px) {
+      .button__load {
+        border-radius: 0;
+        border: 1px solid var(--gray);
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      .button__load {
+        height: 70px;
+      }
+    }
+  </style>
+  <div class="body">
+    <header class="header">
+      <h2 class="header__title">Módulo Loader</h2>
+      <p class="header__instructions"><small>presiona un boton </small></p>
+      <div class="progress__container">
+        <div class="progress__bar" id="myBar"></div>
+      </div>
+    </header>
+    <div class="content">
+      <div class="content__speed-buttons">
+        <button class="button__load button__speed--slow" type="button" value="30">Cargar lento</button>
+        <button class="button__load button__speed--normal" type="button" value="10">Cargar normal</button>
+        <button class="button__load button__speed--fast" type="button" value="3">Cargar rápido</button>
+      </div>
+      <div class="content__speed-button--random">
+        <button class="button__load button__speed--random" type="button">Carga aleatoria</button>
+      </div>
+    </div>
+  </div>
+</template>
+<script src="loader.js"></script>
