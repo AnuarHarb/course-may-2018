@@ -1,0 +1,46 @@
+<script>
+  (function(customElements) {
+    'use strict';
+    class ProgressBar extends HTMLElement {
+      constructor() {
+        super();
+        const shadowRoot = this.attachShadow({mode: 'open'});
+        shadowRoot.innerHTML = `
+          <style>
+          #myProgress {
+            width: 80%;
+            background-color: grey;
+          }
+          #myBar {
+            width: 0%;
+            height: 30px;
+            background-color: green;
+          }
+          </style>
+          <div>
+           <div id="myProgress">
+            <div id="myBar"></div>
+           </div>
+           <br />
+           <button id="boton">Click Me</button>
+          </div>
+        `;
+
+        const boton = shadowRoot.querySelector("#boton");
+          boton.addEventListener("click", () => {
+            const elem = shadowRoot.getElementById("myBar");
+            let width = 1;
+            let id = setInterval(() => {
+              if (width >= 100) {
+                clearInterval(id);
+              } else {
+                width++;
+                elem.style.width = width + '%';
+              }
+            }, 333);
+          });
+      }
+    }
+    customElements.define('progress-bar', ProgressBar);
+  })(window.customElements);
+  </script>
