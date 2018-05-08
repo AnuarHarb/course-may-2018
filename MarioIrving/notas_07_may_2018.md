@@ -69,11 +69,11 @@ Se descargan todos los cambios, si existen conflictos tienes que editar el archi
 
 
 head
-=======
+"= = = = = = ="
 azul es nuestro código
-======
+"= = = = = ="
 codigo de donde hiciste el pull
-===========
+"= = = = = = = = = = ="
 código hash
 
 
@@ -160,5 +160,5 @@ Podrías utilizar win merge resoluciones de conflictos
 * cambiamos master a validacion
 * git checkout master
 * git push upstream master
-* git ckecout validaccion (modifica el archivo)
+* git chekout validacion (modifica el archivo)
 * git remote remove origin
