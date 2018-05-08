@@ -1,0 +1,80 @@
+<script>
+(function(customElements) {
+  'use strict';
+  class myProgressBar extends HTMLElement {
+    constructor() {
+      super();
+      this.myWidth;
+      const shadowRoot = this.attachShadow({mode: 'open'});
+      shadowRoot.innerHTML = `
+      <style>
+        .myProgress {
+            width: 100%;
+            background-color: grey;
+        }
+        .myBar {
+            width: 1%;
+            height: 30px;
+            background-color: green;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .normal__button {
+          font-size: 20px;
+          width: 100px;
+          border-radius: 4px;
+          padding: 10px 10px 10px 10px;
+          background-color: blue;
+          transition: transform .6s;
+        }
+        .normal__button--disabled {
+          pointer-events: none;
+          color: gray;
+          background-color: #ddd;
+        }
+      </style>
+      <h1>Mi primer Web Component Vanilla - (progress bar)</h1>
+      <div class="myProgress">
+        <div class="myBar" id="myBar"></div>
+      </div>
+      <div>
+        <br>
+        <button class="normal__button">Normal</button>
+      </div>
+      `;
+    }
+
+    connectedCallback() {
+      const normalButton = this.shadowRoot.querySelectorAll('.normal__button');
+      const myBar = this.shadowRoot.getElementById('myBar');
+      if (normalButton) {
+        for(const element of normalButton) {
+          element.addEventListener('click', () => {
+            let myProgress = 1;
+            let myRandom = Math.floor(Math.random() * (20 - 40)) + 20;
+            let myId = setInterval(frame, myRandom);
+            element.classList.add('normal__button--disabled');
+            function frame() {
+              if (myProgress >= 100) {
+                clearInterval(myId);
+                element.classList.remove('normal__button--disabled');
+              } else {
+                myProgress++;
+              }
+              myBar.style.width = myProgress + '%';
+              myBar.innerHTML = myProgress * 1 + '%';
+            }
+
+
+          })
+        }
+      }
+    }
+
+
+  }
+  customElements.define('my-progressbar', myProgressBar);
+})(window.customElements);
+</script>
