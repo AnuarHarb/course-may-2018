@@ -67,7 +67,7 @@ En el repositorio local las ramas son más pequeñas.De local a fork se llaman i
 
 Se descargan todos los cambios, si existen conflictos tienes que editar el archivo.
 
----------------
+
 head
 =======
 azul es nuestro código
@@ -75,7 +75,7 @@ azul es nuestro código
 codigo de donde hiciste el pull
 ===========
 código hash
------------
+
 
 Tienes que borra el head los signos de igual y el hash y modificarlo de la mejor manera.
 
@@ -113,9 +113,9 @@ Tienes que borra el head los signos de igual y el hash y modificarlo de la mejor
  editar el archivo para no subir código innecesario
  .gitignore
  * *.txt*
- * .idea/ (para indicar que es un directorio)*
- - **/node_modules/ (lo que sea)**
- * *.log
+ * .idea/ (para indicar que es un directorio)
+ * **/node_modules/ (lo que sea)**
+ * *.log*
 
 Markdown es el lenguaje de maquetado
 
@@ -132,33 +132,33 @@ Podrías utilizar win merge resoluciones de conflictos
 
 ## Práctica
 
-git checkout master
-git branch -d pantallaAlta
-git branch -v
-touch index.js
-atom index.js
-git status
-git add index.js
-git commit -m "algo"
-git log -n 1 (quiero el útlimo commit)
-git checkout master
-git push origin validacion
-git merge validacion
-Te vas al repo destinatario y le das merge para aceptar los cambios
-git push origin master
-Ambos remotes están en el fork
-git pull upstream master
-git status
-atom index.js
-git status
-git add index.js
-git commit -m "fix(*): merge conflict"
-git pull upstream
-git push origin validacion
-De mi repositorio va a salir mi pullrequest
-pestaña pullrequest-> new pull pullrequest
-cambiamos master a validacion
-git checkout master
-git push upstream master
-git ckecout validaccion (modifica el archivo)
-git remote remove origin
+* git checkout master
+* git branch -d pantallaAlta
+* git branch -v
+* touch index.js
+* atom index.js
+* git status
+* git add index.js
+* git commit -m "algo"
+* git log -n 1 (quiero el útlimo commit)
+* git checkout master
+* git push origin validacion
+* git merge validacion
+* Te vas al repo destinatario y le das merge para aceptar los cambios
+* git push origin master
+* Ambos remotes están en el fork
+* git pull upstream master
+* git status
+* atom index.js
+* git status
+* git add index.js
+* git commit -m "fix(*): merge conflict"*
+* git pull upstream
+* git push origin validacion
+* De mi repositorio va a salir mi pullrequest
+* pestaña pullrequest-> new pull pullrequest
+* cambiamos master a validacion
+* git checkout master
+* git push upstream master
+* git ckecout validaccion (modifica el archivo)
+* git remote remove origin

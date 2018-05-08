@@ -20,10 +20,11 @@
 * [Introducción a fetch](https://developers.google.com/web/updates/2015/03/introduction-to-fetch)
 * [WriteFile Node](https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback)
 
-### Curso Git
+### Git
 
 * [git en quince minutos](https://try.github.io/levels/1/challenges/1)
-
+* [Git book](https://git-scm.com/book/en/v2)
+* [Repositorio Alfonso](https://github.com/alfonsorios96/course-april-2018)
 
 ### Markdown
 
