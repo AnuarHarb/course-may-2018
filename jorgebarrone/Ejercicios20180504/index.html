@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <hello-component my-name="JBE"></hello-component>
+  <script>
+    (function(){
+      'use strict';
+      class hellocomponent extends HTMLElement {
+        constructor(){
+          super();
+          this.name = "Jorge";
+          const shadowRoot = this.attachShadow({mode: 'open'});  // Agregamos el elemento al shadow dom y con el modo open para poder acceder al objeto
+          shadowRoot.innerHTML =  `
+            <style>
+              h1 {
+                color: blue;
+                font-size: 40px;
+              }
+            </style>
+            <h1>Hola ${this.myName}</h1>
+            <p>Mi primer component vanilla</p>
+            `;
+        }
+        get myName(){
+          return this.getAttribute('my-name');
+        }
+      }
+
+      customElements.define('hello-component', hellocomponent)
+    })(window.customElements);
+  </script>
+</body>
+</html>
