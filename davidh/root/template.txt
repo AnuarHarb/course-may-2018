@@ -1,0 +1,7 @@
+"env" => "test"
+"client" => "sqlLite"
+"port" => 80
+"host" => "127.0.0.1"
+"user" => "tests"
+"password" => ""
+"database" => "tests"

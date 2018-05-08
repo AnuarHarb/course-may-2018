@@ -1,0 +1,123 @@
+<script>
+
+(function(customElements){
+  'use strict';
+  let shadowRoot=null;
+
+
+  class ProgressBarComponent extends HTMLElement{
+    constructor(){
+      super();
+      //this._speed=null;
+
+      shadowRoot = this.attachShadow({mode: 'open'});
+
+      let speedClass='';
+
+      if (this.speed=='regular'){
+        speedClass='main__progress-bar--regular';
+      }else if (this.speed=='fast'){
+        speedClass='main__progress-bar--fast';
+      }else{
+        speedClass='main__progress-bar--slow';
+      }
+
+        shadowRoot.innerHTML = `<style>
+        .main__progress-bar{
+          height: 20px;
+          width: 900px;
+          margin:40px auto;
+          overflow: hidden;
+          background-color: var(--shadow);
+          border-top: 6px solid var(--shadow);
+          border-left: 6px solid var(--shadow);
+          border-bottom: 6px solid var(--light);
+          border-right: 6px solid var(--light);
+          border-radius: 20px;
+          position: relative;
+          box-shadow:inset 0 0 3px var(--shadow);
+        }
+
+
+        .main__progress-bar--progress{
+          position: absolute;
+          background-image:var(--gloss), var(--gradient-bar);
+          border-radius: 20px;
+          height: 16px;
+          margin: 2px auto;
+          width: 900px;
+          left:-905px;
+          box-shadow: inset 0 0 2px 0 var(--blue-shadow);
+        }
+
+        .main__progress-bar--regular{
+          transition: left 15s;
+        }
+
+        .main__progress-bar--slow{
+          transition: left 30s;
+        }
+
+        .main__progress-bar--fast{
+          transition: left 5s;
+        }
+
+        .main__progress-bar--full{
+          left:0px;
+        }
+
+        </style>
+        <div class="main__progress-bar">
+        <div class="main__progress-bar--progress ${speedClass}" id="prueba"></div>
+      </div>`;
+
+    }
+
+    get speed(){
+      return this.getAttribute('speed') || 'regular';
+
+    }
+
+    set speed(value){
+      const progress=shadowRoot.querySelector('.main__progress-bar--progress');
+      let speedClass='';
+      this.setAttribute('speed',value);
+
+      progress.classList.remove('main__progress-bar--regular');
+      progress.classList.remove('main__progress-bar--fast');
+      progress.classList.remove('main__progress-bar--slow');
+      progress.classList.remove('main__progress-bar--full');
+
+
+      if (this.speed=='regular'){
+        speedClass='main__progress-bar--regular';
+      }else if (this.speed=='fast'){
+        speedClass='main__progress-bar--fast';
+      }else{
+        speedClass='main__progress-bar--slow';
+      }
+
+      progress.classList.add(speedClass);
+      progress.classList.add('main__progress-bar--full');
+
+
+    }
+
+    get filled(){
+      return this.getAttribute('filled')||false;
+    }
+
+    set filled(value){
+      const progress=shadowRoot.querySelector('.main__progress-bar--progress');
+      if (value){
+        this.setAttribute('filled',value);
+        progress.classList.add('main__progress-bar--full');
+      }
+
+    }
+
+
+  }
+  customElements.define('progressbar-component', ProgressBarComponent);
+})(window.customElements);
+</script>

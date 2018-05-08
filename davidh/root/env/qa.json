@@ -1,0 +1,9 @@
+{
+  "env": "qa",
+  "client": "mysql",
+  "port": 8000,
+  "host"     : "www.heroku.instance.com",
+  "user"     : "heroku-user",
+  "password" : "12345678",
+  "database" : "herokudbproject"
+}

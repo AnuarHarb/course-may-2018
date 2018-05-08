@@ -1,0 +1,541 @@
+/****************************** RESPONSIVE WEB ********************************/
+@media (min-width: 769px)  {
+    /*
+    * Variables
+    */
+    :root {
+      /* prymary colors */
+      --primary-color: rgb(0,198,255);
+      --primary-color-opacity: rgba(0,155,242,.15);
+      --button-apply: rgb(149,230,59);
+      --button-apply-active: rgba(149,230,59,.85);
+      /* fonts */
+      --arimo-fonts: 'Arimo', sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      font-family: var(--arimo-fonts) ;
+    }
+    header {
+      width: 100%;
+      margin: 0;
+    }
+    /*
+    * navbar
+    */
+    .nav {
+      width: 100%;
+      height: 110px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      background-color: var(--primary-color);
+    }
+    .nav-central {
+     font-size: 20px;
+     font-weight: bold;
+     margin-left: 300px;
+    }
+    .services-item {
+      margin: 0 20px;
+      color: #DFF4FE;
+      font-size: 14px;
+      font-weight:bolder;
+    }
+    .services-item:hover {
+      text-decoration: underline;
+      color: #EEE;
+      cursor: pointer;
+    }
+
+    .apply-nav {
+      height: 55px;
+      width: 150px;
+      margin-right: 340px;
+      color: white;
+      background-color: var(--button-apply);
+      border-radius: 5px;
+      border: none;
+      /* when a transition ocurred it will be executed durind .6 seconds */
+      transition: transform .4s;
+    }
+    .apply-nav:focus {
+      outline: none;
+    }
+    .apply-nav:hover {
+      cursor: pointer;
+      background-color: var(--button-apply-active);
+    }
+    .apply-nav:active {
+      /* when active it will be move 5px on Y axis*/
+      transform: translateY(3px);
+    }
+    .burger-button {
+      display: none;
+    }
+    .cover {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: linear-gradient(var(--primary-color-opacity), var(--primary-color-opacity)), url("./img/homepage__cover.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .slogan {
+      height: 60vh;
+      width: 70vh;
+      background-image: url("./img/slogan-shadow.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .stats {
+      width: 100%;
+      display: grid;
+      grid-template-columns:  repeat(4, 15%);
+      justify-content: center;
+
+    }
+    .stats-unit {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .unit {
+      color: #0000dd;
+      line-height: 5px;
+      font-size: 40px;
+      font-weight: bold;
+    }
+    .unit--pink {
+      color: #aa3344;
+      line-height: 5px;
+      font-size: 40px;
+      font-weight: bold;
+    }
+    .stats-text {
+      padding: 5px;
+      font-size: 10px;
+      color: #999999;
+    }
+    .codejs {
+      height: 100px;
+      display: grid;
+      grid-template-columns: 62%;
+      justify-content: center;
+      align-items: center;
+    }
+    .codejs code {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      background-color: black;
+      color: white;
+    }
+    .academy-programs {
+      display: grid;
+      grid-template-columns: 20% 40%;
+      grid-column-gap: 20px;
+      justify-content: center;
+    }
+    .academy {
+      display: grid;
+      grid-template-rows: 50px repeat(2, 250px);
+      grid-row-gap: 30px;
+    }
+    .academy-text-container hr {
+      margin-right: 20px;
+    }
+    .academy-text {
+      line-height: 5px;
+      font-size: 30px;
+    }
+    .scholarship {
+      margin-top: 0px;
+      width: 90%;
+      height: 100%;
+      background-image: url("./img/beca.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .start-now {
+      width: 100%;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .start-now h2 {
+      margin-top: 20px;
+      color: #0000ff;
+      font-size: 20px;
+      margin-left: 5px;
+    }
+    .start-now p {
+      margin-left: 5px;
+      font-size: 10px;
+    }
+    .start-now button {
+      color: white;
+      font-size: 10px;
+      background-color: #5CFE00;
+      width: 100%;
+      height: 20%;
+      border-radius: 10px;
+      margin-left: 5px;
+    }
+    .programs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows:   50px repeat(2, 250px);
+      grid-gap: 30px;
+    }
+    .programs-text-container {
+      grid-column: 1/3
+    }
+    .programs-text {
+      line-height: 5px;
+      font-size: 30px;
+    }
+    .course-mobileweb {
+      width: 100%;
+      height: 100%;
+      background-image: url("./img/web-mobile-card-image.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-size: 100% 100%;
+      display: flex;
+      align-items: flex-end;
+      font-size: 20px;
+    }
+    .course-cloud {
+      width: 100%;
+      height: 100%;
+      background-image: url("./img/cloud-architect-card-image.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-size: 100% 100%;
+      display: flex;
+      align-items: flex-end;
+      font-size: 20px;
+    }
+    .course-front {
+      width: 100%;
+      height: 100%;
+      background-image: url("./img/front-end-card-image.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-size: 100% 100%;
+      display: flex;
+      align-items: flex-end;
+      font-size: 20px;
+    }
+    .course-back {
+      width: 100%;
+      height: 100%;
+      background-image: url("./img/back-end-card-image.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      display: flex;
+      align-items: flex-end;
+      font-size: 20px;
+    }
+    .course-description {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 30px;
+      width: 100%;
+      height: 35%;
+      background-color: #444444;
+    }
+    .program-name-mobileweb {
+      margin: 0;
+      padding-bottom: 9px;
+      color: #8EF041;
+    }
+    .program-name-cloud {
+      margin: 0;
+      padding-bottom: 9px;
+      color: #9471B8;
+    }
+    .program-name-front {
+      margin: 0;
+      padding-bottom: 9px;
+      color: #ACDBED ;
+    }
+    .program-name-back {
+      margin: 0;
+      padding-bottom: 9px;
+      color: #FFC300;
+    }
+    .program-nivel {
+      margin: 0;
+      color: white;
+      line-height: 0px;
+      font-size: 20px;
+    }
+}
+/* Nav responsive 1536 px */
+@media screen and (max-width: 1500px) {
+  .nav-central {
+   margin-left: 100px;
+  }
+  .apply-nav {
+    margin-right: 110px;
+  }
+}
+
+/* Nav responsive 1536 px */
+@media screen and (max-width: 1024px) {
+  .nav-central {
+   margin-left: 20px;
+  }
+  .apply-nav {
+    margin-right: 25px;
+  }
+  .services-item {
+    margin: 0px 8px;
+  }
+}
+/**** NOTE: prove if we dont need repeat the Web styles into this view *******/
+/**************************** RESPONSIVE MOBILE *******************************/
+@media screen and (max-width: 768px) {
+  /*
+  * mobile variables
+  */
+   :root {
+      --prymary-color: #444444;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vh;
+      font-family: var(--arimo-fonts) ;
+    }
+    header {
+      width: 100vh;
+      margin: 0;
+    }
+    /*
+    * navbar
+    */
+    .nav {
+      width: 100vh;
+      display: flex;
+      justify-content: space-around;
+      color: white;
+      background-color: var(--prymary-color);
+      font-size: 20px;
+    }
+    .nav-central {
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .services {
+      display: none;
+    }
+    .apply-nav {
+      display: none;
+    }
+    .burger-button {
+      background-color: var(--prymary-color);
+      width: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 15px 40px 15px 50px;
+      padding: 5px;
+      border: 2px solid white;
+      border-radius: 5px;
+    }
+    .cover {
+      height: 100vh;
+      width: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: linear-gradient(rgba(0, 0, 125, 0.3), rgba(0, 0, 125, 0.3)), url("./img/homepage__cover.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .slogan {
+      height: 60vh;
+      width: 70vh;
+      background-image: url("./img/slogan-shadow.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .stats {
+      height: 100vh;
+      width: 100vh;
+      display: grid;
+      grid-template-columns:  repeat(2, 1fr);
+      grid-template-rows:  repeat(2, 1fr);
+    }
+    .stats-unit {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .unit {
+      color: #0000dd;
+      line-height: 5px;
+      font-size: 80px;
+      font-weight: bold;
+    }
+    .unit--pink {
+      color: #aa3344;
+      line-height: 5px;
+      font-size: 80px;
+      font-weight: bold;
+    }
+    .stats-text {
+      padding: 5px;
+      font-size: 20px;
+      color: #999999;
+    }
+    .codejs {
+      display: none;
+    }
+    .academy-text {
+      line-height: 5px;
+      font-size: 50px;
+    }
+    .scholarship {
+      margin: 10px 10px 10px 10px;
+      width: 100vh;
+      height: 100vh;
+      background-image: url("./img/beca.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .start-now {
+      width: 100vh;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .start-now h2 {
+      color: #0000ff;
+      font-size: 50px;
+      margin-left: 5px;
+    }
+    .start-now p {
+      margin-left: 5px;
+      font-size: 30px;
+    }
+    .start-now button {
+      color: white;
+      font-size: 50px;
+      background-color: #0000ff;
+      width: 100%;
+      height: 20%;
+      border-radius: 10px;
+      margin-left: 5px;
+    }
+    .programs {
+      height: 400vh;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 100px  repeat(4, 1fr);
+      grid-gap: 30px;
+    }
+    .programs-text {
+      line-height: 5px;
+      font-size: 50px;
+    }
+    .course-mobileweb {
+      width: 100%;
+      height: 100%;
+      background-image: url("./img/web-mobile-card-image.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-size: 100% 100%;
+      display: flex;
+      align-items: flex-end;
+      font-size: 25px;
+    }
+    .course-cloud {
+      width: 100%;
+      height: 100%;
+      background-image: url("./img/cloud-architect-card-image.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-size: 100% 100%;
+      display: flex;
+      align-items: flex-end;
+      font-size: 25px;
+    }
+    .course-front {
+      width: 100%;
+      height: 100%;
+      background-image: url("./img/front-end-card-image.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-size: 100% 100%;
+      display: flex;
+      align-items: flex-end;
+      font-size: 25px;
+    }
+    .course-back {
+      width: 100%;
+      height: 100%;
+      background-image: url("./img/back-end-card-image.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      display: flex;
+      align-items: flex-end;
+      font-size: 25px;
+    }
+    .course-description {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 30px;
+      width: 100%;
+      height: 35%;
+      background-color: var(--prymary-color);
+    }
+    .program-name-mobileweb {
+      margin: 0;
+      padding-bottom: 9px;
+      color: #8EF041;
+    }
+    .program-name-cloud {
+      margin: 0;
+      padding-bottom: 9px;
+      color: #9471B8;
+    }
+    .program-name-front {
+      margin: 0;
+      padding-bottom: 9px;
+      color: #ACDBED ;
+    }
+    .program-name-back {
+      margin: 0;
+      padding-bottom: 9px;
+      color: #FFC300;
+    }
+    .program-nivel {
+      margin: 0;
+      color: white;
+      line-height: 0px;
+      font-size: 20px;
+    }
+}
