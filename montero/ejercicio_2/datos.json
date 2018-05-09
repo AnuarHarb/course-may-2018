@@ -1,9 +1,8 @@
 {
-  "datos":[
-    {"nombre": "Jose Luis", "ID":"0"},
-    {"nombre": "Hector", "ID":"1"},
-    {"nombre": "Giovanni", "ID":"2"},
-    {"nombre": "David", "ID":"3"},
-    {"nombre": "Carlos", "ID":"4"}
+  "en":[
+    {"key": "title", "value":"My first page"}
+  ],
+  "es":[
+    {"key": "title", "value":"Mi primera página"}
   ]
 }

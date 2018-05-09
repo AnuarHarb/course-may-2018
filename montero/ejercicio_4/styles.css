@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #77c7f4;
+  --nav-color: #1b1d34;
+  --primary-font: arial;
+  --button-color: #cc8023;
+  --bar-color: #34cc23;
+  --bar-color-process: #838882;
+}
+
+body {
+  /*background-color: var(--primary-color);*/
+  font-family: var(--primary-font);
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--nav-color);
+  height: 80px;
+}
+
+.navbar__button_fast {
+  background-color: var(--button-color);
+  border: 1;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: transform .6s;
+  text-transform: uppercase;
+}
+
+.bar_section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.myProgress {
+    width: 80%;
+    background-color: var(--bar-color);
+}
+
+.myBar {
+  background-color: var(--bar-color-process);
+  width: 1%;
+  height: 30px;
+  transition: width 3s;
+}
+
+.percent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,31 +1,37 @@
-(function() {
+(function(document) {
   'use strict';
 
-const article = document.querySelector('.name-list');
+const article = document.querySelector('#name-list');
 const API_URL = 'datos.json';
+let payload = {};
+const map = new Map();
 
 fetch(API_URL)
 .then(response => response.json())
-.then(response => printResponse(response.datos))
+.then(response => {
+  payload = response;
+  render();
+})
 .catch(err => console.log('error en el proceso' + err))
 
 
-function printResponse(datos) {
-  let tabla = '<table border="1">'+
-  '<tr>'+
-  '<td><strong>ID</strong></td>'+
-  '<td><strong>Nombre</strong></td>'+
-  '</tr>';
+const render = (lang = 'es') => {
 
-  for (let i = 0; i < datos.length; i++) {
-    tabla+= '<tr>'+
-    '<td>'+ datos[i].ID + '</td>'+
-    '<td>'+ datos[i].nombre + '</td>'+
-    '</tr>';
+  const dbLanguage = payload[lang];
+  for (const row in dbLanguage) {
+    const node = dbLanguage[row];
+    map.set(node.key, node.value);
   }
 
-  tabla+= '</table>';
-  article.innerHTML = tabla
+
+  const title = document.querySelector('#title');
+  title.innerText = map.get('title');
 }
 
-})();
+const changeLanguage = (lang) => {
+  render(lang);
+};
+
+document.changeLanguage = changeLanguage;
+
+})(document);
