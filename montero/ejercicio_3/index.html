@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ejercicio 3</title> <!-- texto que muestra en la pestaña del navegador -->
+  <link rel="stylesheet" href="styles.css"> <!-- se indica el nombre del archivo de la hoja de estilos -->
+</head>
+<body>
+  <!-- codigo para barra del menu -->
+  <header class="navbar"> <!-- La etiqueta header sirve para mostrar información de cabecera útil para un documento u otras secciones principales. Típicamente se utiliza para agregar encabezados, es decir, h1-h6 que definen el título y subtítulos de la sección. -->
+      <!-- class indica una clase que se ocupa en el archivo styles.css que contine los estilos cada clase va con un nombre y se puede repetir. -->
+      <nav class="navbar__container"> <!-- nav es una equite que se usa para crear un menu de navegacion -->
+        <h2 class="navbar__title">Centraal.Academy</h2>
+        <ul class="navbar__links"> <!-- Las listas no ordenadas van dentro de la etiqueta <ul> HTML y de su cierre </ul>. Cada punto que queramos añadir a la lista, lo haremos dentro de la etiqueta <li> y su cierre. -->
+          <li class="navbar__item">
+            <a class="navbar__item-link" href="">Nosotros</a> <!-- El Elemento HTML Anchor <a> crea un enlace a otras páginas de internet, archivos o ubicaciones dentro de la misma página, direcciones de correo, o cualquier otra URL. -->
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__item-link" href="">Programas</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__item-link" href="">Becas</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__item-link" href="">Contenidos</a>
+          </li>
+        </ul>
+        <div> <!--  div de "division" -división . Sirve para crear secciones o agrupar contenidos. -->
+          <button class="navbar__button">Aplica</button> <!-- Etiqueta para crear botones maneja atributos o se maneja mediante css.
+            maneja eventos: onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.
+            y propiedades como disabled para inhabilitar el boton, accesskey tecla de acceso rapido al boton. -->
+          <button class="navbar__button-mobile">x</button> <!-- este boton se usa para la vista web dado que tiene una clase se puede ocultar en resoluciones mayores y se muestra en resoluciones menores con @media screen and (max-width: 600px) {} en la css. -->
+        </div>
+      </nav>
+    </header>
+<!-- termina codigo de la barra del menu -->
+
+<!-- codigo de imagen central pagina web. -->
+
+<section class="cover">
+  <picture class="cover__picture">
+    <img class="cover__image" src="imagenes/slogan-shadow.png" alt="chicos tomando clase">
+  </picture>
+</section>
+
+<!-- termina codigo imagen central -->
+
+</body>
+</html>

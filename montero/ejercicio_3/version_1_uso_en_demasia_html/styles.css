@@ -1,0 +1,76 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: : 0;
+}
+
+/* #primer-div { } // a si se ocupa el divisor. */
+
+.boton_1{
+   width:130px; /* ancho del boton */
+   height:60px; /* alto del boton */
+   /* font-family:Verdana,Helvetica; tipo der letra del texto del boton */
+   text-decoration: none; /*Decoracion del texto del boton */
+   padding: 10px; /* distancia entre el texto y el borde del boton */
+   font-weight: 600; /* grosor de las letras */
+   font-size: 20px;  /* tamaño de la letra en pixeles */
+   color: #fffcfc; /* color de la letra. Podremos personalizarlo fácilmente con un código HEX, RGB  o incluso RGBA */
+   background-color: #1dfa00; /* color de fondo del botón */
+   border-radius: 6px; /*  redondeado de los cantos de botón * / si no se querie se elimina esta opcion */
+   border: 2px solid #0f0101; /* borde del botón. Podremos asignar un grosor en pixeles y un color */
+ }
+
+ .boton_1:hover {
+     color: #1dfa00;
+     background-color: #fffcfc;
+   }
+
+.tbl_header {
+  position:relative;
+}
+
+.cls_principal {
+  display: flex; /* metodo para ocupar las dos siguientes propiedades solo aplica en el div */
+  justify-content: center; /* centra horizontamente imagen de gota de agua */
+  align-items: center; /* centra verticalmente imagen de gota de agua */
+  height: 650px; /* Alto de imagen central*/
+  width: 100%; /* Espacio que va ocupar imagen central del div */
+  background-image: url("Imagenes/homepage__cover.jpg");
+  background-color: inherit;
+  margin-top: -12%;
+  background-size: cover;
+}
+img {
+  width: 100%;
+}
+
+picture {
+  width: 37%;
+}
+
+.tbl_body1 {
+  margin: auto;
+}
+
+.tbl_body2 {
+  margin: auto;
+}
+
+.tbl_body3 {
+  margin: auto;
+}
+
+.tbl_food1 {
+  margin: auto;
+  margin-top: -3%;
+}
+
+.img_food{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 265px;
+  width: 265px;
+  background-color: inherit;
+  background-size: cover;
+}

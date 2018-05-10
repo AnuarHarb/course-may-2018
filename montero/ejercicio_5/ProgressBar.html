@@ -1,0 +1,34 @@
+<script>
+  (function(customElements) {
+    'use strict';
+
+    class EstatusBarComponent extends HTMLElement {
+      constructor() {
+        super();
+
+        const shadowRoot = this.attachShadow({mode: 'open'});
+
+        shadowRoot.innerHTML = `
+          <style>
+            h1 {
+              color: blue;
+              font-size: 40px;
+            }
+          </style>
+          <h1>Hola ${this.myName}</h1>
+          <p>Mi primer component vanilla</p>
+        `;
+      }
+
+      get myName() {
+        return this.getAttribute('my-name') || 'nombre default';
+      }
+
+      changeName(otherName) {
+        console.log(otherName);
+      }
+    }
+
+    customElements.define('estatusbar-component', EstatusBarComponent);
+  })(window.customElements);
+</script>
