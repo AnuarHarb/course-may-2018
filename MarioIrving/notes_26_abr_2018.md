@@ -7,7 +7,7 @@ Horario 2 a 6 pm.
 Desarrollador Frontend. Gusto por la interacción con el usuario
 
 ## Alfonso Ríos
-3er semestre de ingeniería trunca. 6 años programando. Tiene 22 años.
+3er semestre de ingeniería trunca. 6 años programando. Tiene 22 años. Ironbit
 
 ****
 
@@ -51,11 +51,11 @@ Desarrollador Frontend. Gusto por la interacción con el usuario
 2. Héctor
 3. Carlos
 4. José Luis
-5.  
+5. Oscar
+6. Mario
 7. Mario
-8. Mario
-9. Jorge
-10. David
+8. Jorge
+9. David
 
 ****
 
@@ -104,22 +104,26 @@ Desarrollador Frontend. Gusto por la interacción con el usuario
 * git log
 * git –m "mensaje"
 * git remote add origin (este es el remoto y puede ser llamado de otra manera)
-* git push origin master –u(indicar por default una ruta)
+* git push -u origin master (guarda el remote y el branch indicados)
 * Los mensajes en Git hacer los cambios en ingles
 * git pull –f (fuerza los cambios aunque haya conflictos)
 * git remote –v
 * git remote add upstream
+* git remote add (origin) (url)
+* git stash (Cuando queremos hacer un "pull" y tenemos cambios que no deseamos hacer "commit" por lo que "stash" los cambios)
+* git stash apply (para "re-apply" los cambios después del "pull")
+* git add (posición en la carpeta) (Podemos subir otros cambios al stage aun si ya existen otros archivos)
+* git diff HEAD (compara nuestro ultimo commit con el puntero)
+* git diff --staged (observas los cambios en el stage)
+* git reset (ubicación del archivo) (hace un "unstage" de archivos)
+* git checkout -- (archivo) (los archivos pueden regresar a como estaban antes del "commit") ("--" es una promesa que no hay más cambios)
 * [git en quince minutos](https://try.github.io/levels/1/challenges/1)
 * [fork de Anuar](https://github.com/AnuarHarb/course-may-2018)
+HEAD es un apuntador que contiene las posiciones de tus "commits" por default se posiciona en el "commit" más reciente
+Staged files son archivos que están listos para realizar "commit"
+
 
 ### Markdown
 * MD = markdown
 * [Online Markdown Editor](https://dillinger.io)
 * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-
-****
-
-##ECMA6
-
-* [ECMAScript 6 — New Features: Overview & Comparison](http://es6-features.org/#StatementBodies)
-* [ECMA.org](http://www.ecma-international.org/ecma-262/6.0/)
